@@ -24,13 +24,13 @@ client.on("ready", () => {
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
+  client.user.setActivity(`Now in ${client.guilds.cache.size} servers!`);
 });
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
-  client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
+  client.user.setActivity(`Now serving ${client.guilds.cache.size} servers :(`);
 });
 
 client.on("message", async message => {
@@ -78,7 +78,7 @@ client.on("message", async message => {
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
     // Please read on Array.some() to understand this bit: 
     // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
-    if(!message.member.roles.cache.some(r=>["Admin", ""].includes(r.name)))
+    if(!message.member.roles.cache.some(r=>["Admin", "785964776903016479"].includes(r.name)))
       return message.reply("Sorry, you don't have permissions to use this!");
     
     // Let's first check if we have a member and if we can kick them!
