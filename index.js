@@ -29,10 +29,9 @@ client.on("guildCreate", guild => {
 
 client.on("guildDelete", guild => {
   // this event triggers when the bot is removed from a guild.
-  console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
+  // console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
 });  
-   client.user.setActivity(`Now in - ${client.guilds.cache.size} servers | -bc help :(`);
-
+ //  client.user.setActivity(`Now in - ${client.guilds.cache.size} servers | -bc help :(`);
 
 client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
@@ -70,7 +69,6 @@ const embed = new Discord.MessageEmbed()
    */
   .setTimestamp()
   .setURL("")
-
   message.channel.send(embed);
 }
 
