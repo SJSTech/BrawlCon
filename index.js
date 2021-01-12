@@ -24,7 +24,7 @@ client.on("ready", () => {
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
   console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
-  client.user.setActivity(`Now in ${client.guilds.cache.size} servers!`);
+  client.user.setActivity(`Now in ${client.guilds.cache.size} servers | -bc help`);
 });
 
 client.on("guildDelete", guild => {
