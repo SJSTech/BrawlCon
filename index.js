@@ -63,7 +63,7 @@ const embed = new Discord.MessageEmbed()
   .setColor(0xff0909)
   .setDescription("")
   .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_d03fe35b26c04d998ae142f8ffc0425e~mv2.jpg")
-  .setImage("https://static.wixstatic.com/media/4c553e_89d060eaca4c4bf59387d66cce078cea~mv2.png")
+  .setImage("https://static.wixstatic.com/media/4c553e_4518a3c82cf44062839ea7bdb2c8e43b~mv2.png")
   .setThumbnail("https://static.wixstatic.com/media/4c553e_d03fe35b26c04d998ae142f8ffc0425e~mv2.jpg")
   /*
    * Takes a Date object, defaults to current date.
