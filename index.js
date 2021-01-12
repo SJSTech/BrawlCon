@@ -78,7 +78,7 @@ client.on("message", async message => {
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
     // Please read on Array.some() to understand this bit: 
     // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
-    if(!message.member.roles.cache.some(r=>["Admin", "Verified Admin ✔"].includes(r.name)))
+    if(!message.member.roles.cache.some(r=>["Admin", "785964776903016479"].includes(r.name)))
       return message.reply("Sorry, you don't have permissions to use this!");
     
     // Let's first check if we have a member and if we can kick them!
