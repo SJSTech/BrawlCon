@@ -1,9 +1,9 @@
 {
-  "name": "csbot",
+  "name": "bcbot",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "prefix": "-cs",
+  "prefix" : "-bc",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
