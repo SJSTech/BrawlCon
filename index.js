@@ -19,7 +19,7 @@ client.on("ready", () => {
   // docs refer to as the "ClientUser".
  // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
  //client.user.setActivity(`Con Co. | -bc help `);
-  client.user.setPresence({ LISTENING: { name: 'Con Co. | -bc help' }, status: 'idle' });
+  client.user.setPresence({ Con Co. | -bc help: { name: 'LISTENING' }, status: 'idle' });
 
 });
 
