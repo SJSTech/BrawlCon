@@ -18,7 +18,7 @@ client.on("ready", () => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
  // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
- //client.user.setActivity(`Con Co. | -bc help `);
+ client.user.setActivity(`Con Co. | -bc help `);
 });
 
 client.on("guildCreate", guild => {
@@ -50,25 +50,7 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
-  //add this namespace
-using System.Threading; 
-  /create your Timer
-private Timer _timer;
 
-//create your list of statuses and an indexer to keep track
-private readonly List<string> _statusList = new List<string>() { "first status", "second status", "another status", "last?" };
-private int _statusIndex = 0;
-  private Task Ready()
-{
-    _timer = new Timer(async _ =>
-    {//any code in here will run periodically       
-        await _client.SetGameAsync(_statusList.ElementAtOrDefault(_statusIndex), type: ActivityType.Playing); //set activity to current index position
-        _statusIndex = _statusIndex + 1 == _statusList.Count ? 0 : _statusIndex + 1; //increment index position, restart if end of list
-    },
-    null,
-    TimeSpan.FromSeconds(1), //time to wait before executing the timer for the first time (set first status)
-    TimeSpan.FromSeconds(10)); //time to wait before executing the timer again (set new status - repeats indifinitely every 10 seconds)
-    return Task.CompletedTask;
 }
 
   // Let's go with a few common example commands! Feel free to delete or change those.
