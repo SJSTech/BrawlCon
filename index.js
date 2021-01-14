@@ -19,7 +19,7 @@ client.on("ready", () => {
   // docs refer to as the "ClientUser".
  // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
  //client.user.setActivity(`Con Co. | -bc help`);
- bot.user.setPresence({ game: { name: 'Con Co. | -bc help', type: "streaming", url: "https://www.twitch.tv/wel3comco"}}); 
+ client.user.setActivity({ game: { name: 'Con Co. | -bc help', type: "streaming", url: "https://www.twitch.tv/wel3comco"}}); 
  //client.user.setActivity(“Con Co. | -bc help”, { type: “STREAMING” });
 
 });
