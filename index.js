@@ -28,7 +28,7 @@ client.on("ready", () => {
     activity: {
         name: 'Con Co. | -bc help',
         type: 'STREAMING',
-        url: 'https://www.twitch.tv/wel3comco'
+        url: 'https://www.brawlcon.wixsite.com/brawlcon'
     }
 });
 });
