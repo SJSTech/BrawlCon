@@ -18,16 +18,9 @@ client.on("ready", () => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
  // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
- //client.user.setActivity(`Con Co. | -bc help`);
+ client.user.setActivity(`Con Co. | -bc help`);
  //client.user.setPresence({ Con Co. | -bc help: { name: 'STREAMING' }, status: 'idle' });
  
- client.on('ready', () => {
-    setInterval(async ()=>{
-        let {data: blocks} = await axios.get('https://chain.ragnaproject.io/api/getblockcount').catch(console.log)
-        let textList = ['Hello World','Lorem Ipsum','Discord Bots', 'Blocks: ' + blocks]
-        var text = textList[Math.floor(Math.random() * textList.length)];
-        client.user.setActivity(text , { type: 'WATCHING' })
-    },60000) // milliseconds
 });
 
 client.on("guildCreate", guild => {
