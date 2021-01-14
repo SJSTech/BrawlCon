@@ -26,10 +26,11 @@ client.on("ready", () => {
  client.user.setPresence({
     status: 'online',
     activity: {
-        name: 'Rickroll complication | -cs help',
+        name: 'Con Co. | -bc help',
         type: 'STREAMING',
         url: 'https://www.twitch.tv/wel3comco'
     }
+});
 });
 
 client.on("guildCreate", guild => {
