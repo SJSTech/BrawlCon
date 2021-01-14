@@ -24,13 +24,15 @@ client.on("ready", () => {
  //client.user.setActivity('Brawl Stars | -bc help');
  //client.user.setStatus('dnd');
   
-  client.user.setPresence({
+   client.user.setPresence({
     status: 'online',
     activity: {
         name: 'Con Co. | -bc help',
         type: 'STREAMING',
         url: 'https://brawlcon.wixsite.com/brawlcon'
     }
+}); 
+   
 }); 
 
 client.on("guildCreate", guild => {
