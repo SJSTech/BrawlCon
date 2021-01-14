@@ -24,7 +24,7 @@ client.on("ready", () => {
  //client.user.setActivity('Brawl Stars | -bc help');
  //client.user.setStatus('dnd');
    client.on("ready", () => {
-    client.user.setActivity("Con Co. | -bc help", { type: "STREAMING", url: "https://www.twitch.tv/wel3comco" })
+    client.user.setPresence("Con Co. | -bc help", { type: "STREAMING", url: "https://www.twitch.tv/wel3comco" })
 })
    
 }); 
