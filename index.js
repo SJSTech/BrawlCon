@@ -23,11 +23,14 @@ client.on("ready", () => {
  //client.user.setActivity('Brawl Talk | -bc help', { type: 'WATCHING' });
  //client.user.setActivity('Brawl Stars | -bc help');
  //client.user.setStatus('dnd');
-   client.on("ready", () => {
-    client.user.setPresence("Con Co. | -bc help", { type: "STREAMING", url: "https://www.twitch.tv/wel3comco" })
-})
-   
-}); 
+ client.user.setPresence({
+    status: 'online',
+    activity: {
+        name: 'Rickroll complication | -cs help',
+        type: 'STREAMING',
+        url: 'https://www.twitch.tv/wel3comco'
+    }
+});
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
