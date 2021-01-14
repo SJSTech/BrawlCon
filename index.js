@@ -22,9 +22,9 @@ client.on("ready", () => {
  //client.user.setActivity('Con Co. | -bc help', { type: 'LISTENING' });
  //client.user.setActivity('Brawl Talk | -bc help', { type: 'WATCHING' });
  //client.user.setActivity('Brawl Stars | -bc help');
- //client.user.setStatus('dnd');
+ client.user.setStatus('dnd');
  
- client.user.setPresence({
+ //client.user.setPresence({
     status: 'online',
     activity: {
         name: 'Con Co. | -bc help',
