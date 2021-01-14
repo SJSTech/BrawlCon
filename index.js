@@ -25,7 +25,7 @@ client.on("ready", () => {
  //client.user.setStatus('dnd');
  //client.user.setPresence({ activity: { name: 'In Maintenance | Con Co.' }, status: 'dnd' });
  //client.user.setPresence({ activity: { name: 'Downtime | Con Co.' }, status: 'idle' });
- client.user.setPresence({ activity: { name: 'Offline' }, status: 'invisible' });
+ client.user.setPresence({ activity: { name: 'Offline' }, status: 'dnd' });
 });
 
 client.on("guildCreate", guild => {
