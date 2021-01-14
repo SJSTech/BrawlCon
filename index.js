@@ -18,8 +18,8 @@ client.on("ready", () => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
  // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
- client.user.setActivity(`Con Co. | -bc help`);
- //client.user.setPresence({ Con Co. | -bc help: { name: 'STREAMING' }, status: 'idle' });
+ //client.user.setActivity(`Con Co. | -bc help`);
+ bot.user.setPresence({ game: { name: 'Con Co. | -bc help', type: "streaming", url: "https://www.twitch.tv/wel3comco"}}); 
  //client.user.setActivity(“Con Co. | -bc help”, { type: “STREAMING” });
 
 });
