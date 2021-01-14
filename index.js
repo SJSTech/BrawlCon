@@ -19,11 +19,10 @@ client.on("ready", () => {
   // docs refer to as the "ClientUser".
  // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
  //client.user.setActivity(`Con Co. | -bc help`);
- //client.user.setPresence({ Con Co. | -bc help: { name: 'LISTENING' }, status: 'idle' });
+ //client.user.setPresence({ Con Co. | -bc help: { name: 'STREAMING' }, status: 'idle' });
  stream client.user.setActivity("Con Co. | -bc help", {
   type: 'STREAMING',
   url: "https://www.twitch.tv/wel3comco"
-});
 });
 
 client.on("guildCreate", guild => {
