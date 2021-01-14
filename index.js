@@ -18,9 +18,9 @@ client.on("ready", () => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
  // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
- //client.user.setActivity(`Con Co. | -bc help`);
+ client.user.setActivity(`Con Co. | -bc help`);
  //client.user.setPresence({ Con Co. | -bc help: { name: 'STREAMING' }, status: 'idle' });
- client.user.setActivity(“Con Co. | -bc help”, { type: “STREAMING” });
+//client.user.setActivity(“Con Co. | -bc help”, { type: “STREAMING” });
 });
 
 client.on("guildCreate", guild => {
@@ -56,6 +56,9 @@ client.on("message", async message => {
 
   // Let's go with a few common example commands! Feel free to delete or change those.
  
+  const user = <client>.users.cache.get('<777587937390493697>');
+user.send('<ur bad>');
+  
   
   if(command === "help") {
 const embed = new Discord.MessageEmbed()
