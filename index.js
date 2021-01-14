@@ -20,9 +20,15 @@ client.on("ready", () => {
  // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
  //client.user.setActivity(`Con Co. | -bc help`);
  //client.user.setPresence({ Con Co. | -bc help: { name: 'STREAMING' }, status: 'idle' });
- stream client.user.setActivity("Con Co. | -bc help", {
-  type: 'STREAMING',
-  url: "https://www.twitch.tv/wel3comco"
+ bot.on('ready', () => {
+    bot.user.setStatus('available')
+    bot.user.setPresence({
+        game: {
+            name: 'Con Co.| -bc help',
+            type: "STREAMING",
+            url: "https://www.twitch.tv/wel3comco"
+        }
+    });
 });
 
 client.on("guildCreate", guild => {
