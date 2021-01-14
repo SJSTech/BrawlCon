@@ -7,4 +7,6 @@ Commands
 -bc <gamemode> (shows details about a certain gamemode)
 -bc <club> (Shows club stats)
 
+New commands coming soon. Thank you for using the BrawlCon bot!
+
 ```
