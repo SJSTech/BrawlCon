@@ -25,11 +25,11 @@ client.on("ready", () => {
  client.user.setStatus('dnd');
  
  //client.user.setPresence({
-    status: 'online',
-    activity: {
-        name: 'Con Co. | -bc help',
-        type: 'STREAMING',
-        url: 'https://www.twitch.tv/wel3comco'
+    //status: 'online',
+    //activity: {
+        //name: 'Con Co. | -bc help',
+        //type: 'STREAMING',
+        //url: 'https://www.twitch.tv/wel3comco'
     }
 });
 
