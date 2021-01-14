@@ -33,7 +33,6 @@ client.on("ready", () => {
         //type: 'STREAMING',
         //url: 'https://www.twitch.tv/wel3comco'
     }
-});
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
