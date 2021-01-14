@@ -23,8 +23,7 @@ client.on("ready", () => {
  //client.user.setActivity('Brawl Talk | -bc help', { type: 'WATCHING' });
  //client.user.setActivity('Brawl Stars | -bc help');
  //client.user.setStatus('dnd');
-
-  client.user.setPresence({
+   client.user.setActivity({
     status: 'online',
     activity: {
         name: 'Con Co. | -bc help',
