@@ -18,9 +18,22 @@ client.on("ready", () => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
  // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
- client.user.setActivity(`Con Co. | -bc help`);
+ //client.user.setActivity(`Con Co. | -bc help`);
  //client.user.setPresence({ Con Co. | -bc help: { name: 'LISTENING' }, status: 'idle' });
 
+  const activities_list = [
+    "with the &help command.", 
+    "with the developers console",
+    "with some code", 
+    "with JavaScript"
+    ]; // creates an arraylist containing phrases you want your bot to switch through.
+
+bot.on('ready', () => {
+    setInterval(() => {
+        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+        bot.user.setActivity(activities_list[index]); // sets bot's activities to one of the phrases in the arraylist.
+    }, 10000); // Runs this every 10 seconds.
+});
 });
 
 client.on("guildCreate", guild => {
