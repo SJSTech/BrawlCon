@@ -13,7 +13,7 @@ const config = require("./package.json");
 // config.prefix contains the message prefix.
 
 const activities_list = [
-    "Con Co. | -bc help", 
+    "KulKid Sim | -bc help", 
     "Brawl Stars | -bc help",
     "Con Co. | -bc help", 
     "Brawl Talk | -bc help"
