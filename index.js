@@ -15,8 +15,8 @@ const config = require("./package.json");
 const activities_list = [
     "KulKid Sim | -bc help", 
     "Brawl Stars | -bc help",
-    "Con Co. | -bc help", 
-    "Brawl Talk | -bc help"
+    "Brawl Talk | -bc help", 
+    "Con Co. | -bc help"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
@@ -58,10 +58,6 @@ client.on("message", async message => {
   
 
   // Let's go with a few common example commands! Feel free to delete or change those.
-  
-    
-    const user = client.users.cache.get('672930250577018899');
-user.send('test');
   
     if(command === "help") {
 const embed = new Discord.MessageEmbed()
