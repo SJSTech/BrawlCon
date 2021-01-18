@@ -14,7 +14,7 @@ const config = require("./package.json");
 
 const activities_list = [ 
     "Brawl Ball | -bc help",
-    "Solo Showdown | -bc help", 
+    "Solo SD | -bc help", 
     "Con Co. | -bc help",
     "Brawl Stars | -bc help"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
