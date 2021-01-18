@@ -16,7 +16,8 @@ const activities_list = [
     "KulKid Sim | -bc help", 
     "Brawl Stars | -bc help",
     "Brawl Talk | -bc help", 
-    "Con Co. | -bc help"
+    "Con Co. | -bc help",
+    "Solo Showdown | -bc help"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
