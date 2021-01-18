@@ -15,9 +15,9 @@ const config = require("./package.json");
 const activities_list = [
     "KulKid Sim | -bc help", 
     "Brawl Stars | -bc help",
-    "Brawl Talk | -bc help", 
+    "Solo Showdown | -bc help", 
     "Con Co. | -bc help",
-    "Solo Showdown | -bc help"
+    "Duo Showdown | -bc help"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
