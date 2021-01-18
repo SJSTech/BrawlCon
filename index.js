@@ -60,8 +60,8 @@ client.on("message", async message => {
   // Let's go with a few common example commands! Feel free to delete or change those.
   
     
-const user = client.users.cache.get('672930250577018899');
-   user.send('test');
+    const channel = client.channels.cache.get('796824844851347466');
+channel.send('YO');
   
     if(command === "help") {
 const embed = new Discord.MessageEmbed()
