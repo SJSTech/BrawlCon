@@ -12,12 +12,11 @@ const config = require("./package.json");
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
-const activities_list = [
-    "KulKid Sim | -bc help", 
+const activities_list = [ 
     "Brawl Stars | -bc help",
     "Solo Showdown | -bc help", 
     "Con Co. | -bc help",
-    "Duo Showdown | -bc help"
+    "Brawl Ball | -bc help"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
