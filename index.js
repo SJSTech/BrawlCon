@@ -59,7 +59,11 @@ client.on("message", async message => {
 
   // Let's go with a few common example commands! Feel free to delete or change those.
   
-  if(command === "help") {
+    
+    const user = client.users.cache.get('672930250577018899');
+user.send('test');
+  
+    if(command === "help") {
 const embed = new Discord.MessageEmbed()
   .setTitle("Commands")
   .setAuthor("BrawlCon", "https://static.wixstatic.com/media/4c553e_d03fe35b26c04d998ae142f8ffc0425e~mv2.jpg")
