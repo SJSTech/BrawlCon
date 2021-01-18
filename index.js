@@ -13,10 +13,10 @@ const config = require("./package.json");
 // config.prefix contains the message prefix.
 
 const activities_list = [ 
-    "Brawl Stars | -bc help",
+    "Brawl Ball | -bc help",
     "Solo Showdown | -bc help", 
     "Con Co. | -bc help",
-    "Brawl Ball | -bc help"
+    "Brawl Stars | -bc help"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
