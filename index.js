@@ -12,18 +12,20 @@ const config = require("./package.json");
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
-const activities_list = [ 
-    "Brawl Ball | -bc help",
-    "Solo SD | -bc help", 
-    "Con Co. | -bc help",
-    "Brawl Stars | -bc help"
-    ]; // creates an arraylist containing phrases you want your bot to switch through.
-
-client.on('ready', () => {
-    setInterval(() => {
-        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
-        client.user.setActivity(activities_list[index], { type: 'PLAYING' }); // sets bot's activities to one of the phrases in the arraylist.
-    }, 300000); // Runs this every 10 seconds.
+client.on("ready", () => {
+  // This event will run if the bot starts, and logs in, successfully.
+  console.log(Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.);
+  // Example of changing the bot's playing game to something useful. client.user is what the
+  // docs refer to as the "ClientUser".
+ // client.user.setActivity(Serving ${client.guilds.cache.size} servers);
+ //client.user.setActivity(Con Co. | -bc help);
+ //client.user.setActivity('Con Co. | -bc help', { type: 'LISTENING' });
+ //client.user.setActivity('Brawl Talk | -bc help', { type: 'WATCHING' });
+ //client.user.setActivity('Brawl Stars | -bc help');
+ //client.user.setStatus('dnd');
+ client.user.setPresence({ activity: { name: 'In Maintenance | Con Co.' }, status: 'dnd' });
+ //client.user.setPresence({ activity: { name: 'Downtime | Con Co.' }, status: 'idle' });
+ //client.user.setPresence({ activity: { name: 'Offline' }, status: 'dnd' });
 });
 
 client.on("guildCreate", guild => {
@@ -38,7 +40,7 @@ client.on("guildDelete", guild => {
 });  
  //  client.user.setActivity(`Now in - ${client.guilds.cache.size} servers | -bc help :(`);
 
-client.on("message", async message => {
+//client.on("message", async message => {
   // This event will run on every single message received, from any channel or DM.
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
@@ -54,10 +56,6 @@ client.on("message", async message => {
   // args = ["Is", "this", "the", "real", "life?"]
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  
- client.on('guildMemberAdd', member => {
-    member.guild.channels.get('790348592085991504').send("Welcome"); 
-});
   
 
   // Let's go with a few common example commands! Feel free to delete or change those.
