@@ -55,6 +55,9 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
+ client.on('guildMemberAdd', member => {
+    member.guild.channels.get('790348592085991504').send("Welcome"); 
+});
   
 
   // Let's go with a few common example commands! Feel free to delete or change those.
