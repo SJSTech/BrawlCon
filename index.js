@@ -70,15 +70,15 @@ client.on("message", async message => {
     if(command === "help") {
 const embed = new Discord.MessageEmbed()
   .setTitle("Commands")
-  .setAuthor("BrawlCon", "https://static.wixstatic.com/media/4c553e_d03fe35b26c04d998ae142f8ffc0425e~mv2.jpg")
+  .setAuthor("BrawlCon", "https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
   .setColor(0xff0909)
   .setDescription("")
-  .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_d03fe35b26c04d998ae142f8ffc0425e~mv2.jpg")
+  .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
   .setImage("")
-  .setThumbnail("https://static.wixstatic.com/media/4c553e_d03fe35b26c04d998ae142f8ffc0425e~mv2.jpg")
+  .setThumbnail("https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
   /*
    * Takes a Date object, defaults to current date.
    */
