@@ -74,7 +74,7 @@ const embed = new Discord.MessageEmbed()
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
-  .setColor(#ff0909)
+  .setColor(0xff0909)
   .setDescription("")
   .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_d03fe35b26c04d998ae142f8ffc0425e~mv2.jpg")
   .setImage("")
