@@ -6,7 +6,7 @@ module.exports = (client) => {
     const message = `Welcome <@${
       member.id
     }> to the server! Please check out ${member.guild.channels.cache
-      .get(targetChannelId).
+      .get(targetChannelId)
       .toString()}`
 
     const channel = member.guild.channels.cache.get(channelId)
