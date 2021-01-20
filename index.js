@@ -85,7 +85,7 @@ const embed = new Discord.MessageEmbed()
   .setTimestamp()
   .setURL("")
   .addFields(
-	{ name: 'Prefix', value: 'Our prefix is -bc.', inline: true },
+	{ name: 'Prefix', value: 'Our prefix is -bc', inline: true },
 	{ name: 'help', value: 'Message with all the commands', inline: true },
 	{ name: '<map>', value: 'show the map you specified', inline: true },
         { name: '<brawler>', value: 'Shows the specified brawler stats', inline: true },
