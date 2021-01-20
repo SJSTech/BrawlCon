@@ -1,9 +1,9 @@
 module.exports = (client) => {
-  const channelId = '719800187404681257' // welcome channel
-  const targetChannelId = '719799889973739560' // rules and info
+  const channelId = '790348592085991504' // welcome channel
+  const targetChannelId = '782022655402311700' // rules and info
 
   client.on('guildMemberAdd', (member) => {
-    const message = `Please welcome <@${
+    const message = `Welcome <@${
       member.id
     }> to the server! Please check out ${member.guild.channels.cache
       .get(targetChannelId)
