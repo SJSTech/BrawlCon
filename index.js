@@ -74,16 +74,25 @@ const embed = new Discord.MessageEmbed()
   /*
    * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
    */
-  .setColor(0xff0909)
+  .setColor(#ff0909)
   .setDescription("")
   .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_d03fe35b26c04d998ae142f8ffc0425e~mv2.jpg")
-  .setImage("https://static.wixstatic.com/media/4c553e_aac6b479253444e6aabebbed2579cf50~mv2.png")
+  .setImage("")
   .setThumbnail("https://static.wixstatic.com/media/4c553e_d03fe35b26c04d998ae142f8ffc0425e~mv2.jpg")
   /*
    * Takes a Date object, defaults to current date.
    */
   .setTimestamp()
   .setURL("")
+  .addFields(
+	{ name: 'Prefix', value: 'Our prefix is -bc.', inline: true },
+	{ name: 'help', value: 'Message with all the commands', inline: true },
+	{ name: '<map>', value: 'show the map you specified', inline: true },
+        { name: '<brawler>', value: 'Shows the specified brawler stats', inline: true },
+        { name: '<gamemode>', value: 'Shows details and stats about the specified gamemode', inline: true },
+        { name: '<club>', value: 'Shows the specified club stats', inline: true },
+        
+  	)
   message.channel.send(embed);
 }
 
