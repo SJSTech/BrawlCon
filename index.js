@@ -29,11 +29,6 @@ client.on('ready', () => {
     }, 300000); // Runs this every 5 minutes.
    
 
-	
-	welcome(client);
-});
-
-
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
  // console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
