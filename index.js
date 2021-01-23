@@ -38,8 +38,8 @@ var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","ci
 var jsonParsed = JSON.parse(jsonData);
  
 // access elements
-// const jsonOut = jsonParsed.persons[0].name;
-  const jsonOut = "test1";
+ const jsonOut = jsonParsed.persons[0].name;
+//  const jsonOut = "test1";
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
@@ -77,7 +77,7 @@ client.on("message", async message => {
     // 
     message.channel.send(jsonOut);
   }
-  
+
     
     if(command === "help") {
 const embed = new Discord.MessageEmbed()
