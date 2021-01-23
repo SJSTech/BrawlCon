@@ -40,12 +40,6 @@ var jsonParsed = JSON.parse(jsonData);
 // access elements
 // const jsonOut = jsonParsed.persons[0].name;
   const jsonOut = "test1";
-  
-if(command === "showdown") {
-  // 
-  // 
-  message.channel.send(jsonOut);
-}
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
@@ -78,6 +72,12 @@ client.on("message", async message => {
 
   // Let's go with a few common example commands! Feel free to delete or change those!
     
+  if(command === "showdown") {
+    // 
+    // 
+    message.channel.send(jsonOut);
+  }
+  
     
     if(command === "help") {
 const embed = new Discord.MessageEmbed()
