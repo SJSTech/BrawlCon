@@ -31,6 +31,21 @@ client.on('ready', () => {
 	welcome(client);
 });
 
+// json data
+var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
+ 
+// parse json
+var jsonParsed = JSON.parse(jsonData);
+ 
+// access elements
+const jsonOut = jsonParsed.persons[0].name);
+
+if(command === "showdown") {
+  // 
+  // 
+  message.channel.send(jsonOut);
+}
+
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
  // console.log(`New guild joined: ${guild.name} (id: ${guild.id}). This guild has ${guild.memberCount} members!`);
@@ -91,7 +106,6 @@ const embed = new Discord.MessageEmbed()
   	)
   message.channel.send(embed);
 }
-
 
   if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
