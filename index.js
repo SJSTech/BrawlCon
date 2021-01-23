@@ -14,7 +14,7 @@ const welcome = require ('./welcome');
 // config.prefix contains the message prefix.
 
 const activities_list = [ 
-    "Brawl Ball | -bc help"
+    "Brawl Ball | -bc help",
     "Solo SD | -bc help", 
     "Con Co. | -bc help",
     "Brawl Stars | -bc help",
