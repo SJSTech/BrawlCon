@@ -38,8 +38,9 @@ var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","ci
 var jsonParsed = JSON.parse(jsonData);
  
 // access elements
-const jsonOut = jsonParsed.persons[0].name;
-
+// const jsonOut = jsonParsed.persons[0].name;
+  const jsonOut = "test1";
+  
 if(command === "showdown") {
   // 
   // 
