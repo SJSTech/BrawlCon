@@ -13,20 +13,8 @@ const welcome = require ('./welcome');
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
-const activities_list = [ 
-    "Brawl Ball | -bc help",
-    "Solo SD | -bc help", 
-    "Con Co. | -bc help",
-    "Brawl Stars | -bc help",
-    "Virus 8-bit | -bc help",
-    "Dark Lord Spike | -bc help"
-    ]; // creates an arraylist containing phrases you want your bot to switch through.
-
 client.on('ready', () => {
-    setInterval(() => {
-        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
-        client.user.setActivity(activities_list[index], { type: 'PLAYING' }); // sets bot's activities to one of the phrases in the arraylist.
-    }, 300000); // Runs this every 5 minutes.
+client.user.setPresence({ activity: { name: 'In Maintenance | Con Co.' }, status: 'dnd' });
    
 	welcome(client);
 });
