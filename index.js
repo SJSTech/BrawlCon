@@ -24,7 +24,7 @@ client.on("ready", () => {
  //client.user.setActivity('Brawl Talk | -bc help', { type: 'WATCHING' });
  //client.user.setActivity('Brawl Stars | -bc help');
  //client.user.setStatus('dnd');
- client.user.setPresence({ activity: { name: 'In Maintenance | Con Co.' }, status: 'dnd' });
+client.user.setPresence({ activity: { name: 'In Maintenance | Con Co.' }, status: 'dnd' });
  //client.user.setPresence({ activity: { name: 'Downtime | Con Co.' }, status: 'idle' });
  //client.user.setPresence({ activity: { name: 'Offline' }, status: 'dnd' });
 });
