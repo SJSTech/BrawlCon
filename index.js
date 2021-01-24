@@ -37,7 +37,7 @@ const request = require('request');
 request({
   url: 'https://api.starlist.pro/maps/15000004',
   headers: {
-     'Authorization': 'Bearer ' + process.env.STARLIST_TOKEN
+     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzdGFybGlzdC5wcm8iLCJhdWQiOiJzdGFybGlzdC5wcm8iLCJzdWIiOiI2NzI5MzAyNTA1NzcwMTg4OTkiLCJpYXQiOjE2MTAzNzc4MjAsImp0aSI6ImF2M2prVVk0OUt6T0N4SldBUmVEMFp6eGtCTVFOcjJITXR3NmJKeXlxWDhzZjc3UzRCMDF5YWRya3AzWFVFSU9nY1JGWGFxV0VabnZaR2phVnM0bWxubTZ2MkRRQmtLR1hVUTJDTENVVVRlNzdwNXRJQ3E2THdsOURuR0tFcGU1SHVNY21qZzBkMUlvYlQ1dXZXUzBLVE'
   },
   rejectUnauthorized: false
 }, function(err, res) {
