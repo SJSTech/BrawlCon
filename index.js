@@ -19,7 +19,7 @@ const activities_list = [
     "Con Co. | -bc help",
     "Brawl Stars | -bc help",
     "Virus 8-bit | -bc help",
-    "Dark Lord Spike | -bc help"
+    "Update Hype | -bc help"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 client.on('ready', () => {
