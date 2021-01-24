@@ -34,7 +34,6 @@ client.on('ready', () => {
 	welcome(client);
 });
 
-
 const request = require('request');
 request({
   url: 'https://api.starlist.pro/maps/15000004',
@@ -54,11 +53,11 @@ request({
 // var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
  
 // parse json
- var jsonParsed = JSON.parse(request);
+// var jsonParsed = JSON.parse(request);
  
 // access elements
- const jsonOut = jsonParsed.list[0].imageUrl;
- // const jsonOut = "Command coming soon!";
+// const jsonOut = jsonParsed.list[0].imageUrl;
+  const jsonOut = "Command coming soon!";
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
