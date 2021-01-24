@@ -14,19 +14,7 @@ const welcome = require ('./welcome');
 // config.prefix contains the message prefix.
 
 client.on("ready", () => {
-  // This event will run if the bot starts, and logs in, successfully.
-  console.log(Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.);
-  // Example of changing the bot's playing game to something useful. client.user is what the
-  // docs refer to as the "ClientUser".
- // client.user.setActivity(Serving ${client.guilds.cache.size} servers);
- //client.user.setActivity(Con Co. | -bc help);
- //client.user.setActivity('Con Co. | -bc help', { type: 'LISTENING' });
- //client.user.setActivity('Brawl Talk | -bc help', { type: 'WATCHING' });
- //client.user.setActivity('Brawl Stars | -bc help');
- //client.user.setStatus('dnd');
- client.user.setPresence({ activity: { name: 'In Maintenance | Con Co.' }, status: 'dnd' });
- //client.user.setPresence({ activity: { name: 'Downtime | Con Co.' }, status: 'idle' });
- //client.user.setPresence({ activity: { name: 'Offline' }, status: 'dnd' });
+client.user.setPresence({ activity: { name: 'In Maintenance | Con Co.' }, status: 'dnd' });
 });
 
    
