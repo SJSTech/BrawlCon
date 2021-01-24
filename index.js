@@ -56,7 +56,7 @@ request({
 var jsonParsed = JSON.parse(request);
  
 // access elements
- const jsonOut = jsonParsed.persons[0].imageUrl;
+ const jsonOut = jsonParsed.list[0].imageUrl;
 //  const jsonOut = "test1";
 
 client.on("guildCreate", guild => {
