@@ -15,6 +15,7 @@ const welcome = require ('./welcome');
 
 client.on("ready", () => {
 client.user.setPresence({ activity: { name: 'In Maintenance | Con Co.' }, status: 'dnd' });
+
 });
 
    
