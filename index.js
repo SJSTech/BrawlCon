@@ -34,30 +34,35 @@ client.on('ready', () => {
 	welcome(client);
 });
 
-var jsonData = require('request');
+var request = require('request');
 request({
   url: 'https://api.starlist.pro/maps/15000004',
   headers: {
     'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzdGFybGlzdC5wcm8iLCJhdWQiOiJzdGFybGlzdC5wcm8iLCJzdWIiOiI2NzI5MzAyNTA1NzcwMTg4OTkiLCJpYXQiOjE2MTE1MjYyMjAsImp0aSI6Imo5aTB4UmlmeDBjSW9XTUhSbU5wR21Zb3A5cXFzNE9MdGtZVGZaVFF5UUNlRU4wMVdKaVFmRlhYNnVkNDFQdVdlOFduTzRWM2dGemM3TUhlczRXQ1ZYWmZCTnVTREd3R1U5Zzgwd1NZQnlnc1pCMFFJdzhiRFh1TFpkSjVSUjVPdnRKazZ6ckFPdjc3S21ITlR6M2l1bEVBdlNvYVBNSWpxMzg2Smsxc2VFbWJVU3R4ZVV4VlprRDJ6YURBdDk2eWJLbmZVUm5Bb3lkM2FFSGdrcmJhbnBiTHBGTDJMaENRN29KUEVNbE9kM3ZBbEQ1c25ySU5TaDJQaWNHVXJ2NC0yNjQifQ.m-oyq2cbDSJrCgizmFk0i56FUDZgGx-m3sV6vaJtRENothoEba2buvF6JJi5dalWshp2sLHBPyB3ARgzpkQqDg'
   },
   rejectUnauthorized: false
-}, function(err, res) {
-      if(err) {
-        console.error(err);
-    //  } else {
-    //    console.log(res.body);
+}, function(error, response, body) {
+    if (!error && response.statusCode == 200) {
+    var jsonArr = JSON.parse(body);
+    console.log(jsonArr);
+    console.log("group id:" + jsonArr[0].id);
+    }
+  else {
+        console.error(error);
+    //    console.log(request.body);
       }
  });
-
 // json data
 // var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
  
+{"status":"ok","map":{"id":15000004,"new":false,"disabled":false,"name":"Snake Prairie","hash":"Snake-Prairie","version":5,"link":"https://www.starlist.pro/maps/detail/Snake-Prairie","imageUrl":"https://cdn.starlist.pro/map/Snake-Prairie.png?v=5","credit":null,"environment":{"id":39,"name":"Default","hash":"event_canyon_banner","path":"Canyon","version":1,"imageUrl":"https://cdn.starlist.pro/environment/Canyon.png?v=1"},"gameMode":{"id":1,"name":"Bounty","hash":"Bounty","version":1,"color":"#10b2b7","link":"https://www.starlist.pro/gamemodes/detail/Bounty","imageUrl":"https://cdn.starlist.pro/gamemode/Bounty.png?v=1"},"lastActive":1610892000,"dataUpdated":1611280218,"stats":[{"brawler":16000036,"winRate":71.0816,"useRate":1.93202,"starRate":2.03244},{"brawler":16000017,"winRate":68.9072,"useRate":10.1419,"starRate":15.0317},{"brawler":16000042,"winRate":67.9348,"useRate":0.220506,"starRate":0.199096},{"brawler":16000031,"winRate":67.7187,"useRate":1.45023,"starRate":1.4393},{"brawler":16000015,"winRate":65.5827,"useRate":2.22027,"starRate":2.62558},{"brawler":16000014,"winRate":63.2785,"useRate":18.7023,"starRate":21.4567},{"brawler":16000030,"winRate":61.8309,"useRate":1.8394,"starRate":3.09428},{"brawler":16000013,"winRate":58.2722,"useRate":1.8553,"starRate":1.8126},{"brawler":16000027,"winRate":57.5499,"useRate":0.503225,"starRate":0.489444},{"brawler":16000003,"winRate":56.9536,"useRate":1.41981,"starRate":0.7632},{"brawler":16000022,"winRate":55.8011,"useRate":0.762441,"starRate":0.327678},{"brawler":16000028,"winRate":55.2326,"useRate":0.714745,"starRate":0.82127},{"brawler":16000019,"winRate":54.067,"useRate":1.25184,"starRate":0.966444},{"brawler":16000012,"winRate":53.4539,"useRate":1.75645,"starRate":0.485296},{"brawler":16000007,"winRate":53.2199,"useRate":2.47257,"starRate":2.30204},{"brawler":16000040,"winRate":52.3585,"useRate":0.293778,"starRate":0.136878},{"brawler":16000011,"winRate":52.3356,"useRate":1.31889,"starRate":0.808827},{"brawler":16000000,"winRate":52.331,"useRate":16.9769,"starRate":19.0551},{"brawler":16000039,"winRate":52.1951,"useRate":0.568893,"starRate":0.460409},{"brawler":16000008,"winRate":52.1874,"useRate":3.34907,"starRate":3.04036},{"brawler":16000034,"winRate":51.2953,"useRate":1.56912,"starRate":2.28545},{"brawler":16000016,"winRate":50.6641,"useRate":0.805989,"starRate":0.842009},{"brawler":16000004,"winRate":49.5575,"useRate":0.866127,"starRate":0.638766},{"brawler":16000002,"winRate":49.3507,"useRate":4.39838,"starRate":4.10635},{"brawler":16000005,"winRate":49.1525,"useRate":1.59331,"starRate":1.09503},{"brawler":16000037,"winRate":48.951,"useRate":0.210138,"starRate":0.0871044},{"brawler":16000001,"winRate":48.4921,"useRate":3.78939,"starRate":2.43892},{"brawler":16000038,"winRate":48.3421,"useRate":1.70737,"starRate":0.937409},{"brawler":16000021,"winRate":48.1928,"useRate":0.35599,"starRate":0.141026},{"brawler":16000035,"winRate":47.3485,"useRate":0.779722,"starRate":0.323531},{"brawler":16000043,"winRate":46.5798,"useRate":1.84216,"starRate":1.6301},{"brawler":16000006,"winRate":46.1806,"useRate":0.399538,"starRate":0.0497739},{"brawler":16000024,"winRate":45.8382,"useRate":2.47327,"starRate":2.78319},{"brawler":16000029,"winRate":45.7604,"useRate":1.06313,"starRate":0.497739},{"brawler":16000009,"winRate":44.9821,"useRate":0.818431,"starRate":0.331826},{"brawler":16000020,"winRate":44.2308,"useRate":0.767971,"starRate":0.958148},{"brawler":16000032,"winRate":44.0729,"useRate":0.507372,"starRate":0.128583},{"brawler":16000023,"winRate":43.3598,"useRate":1.40322,"starRate":0.700983},{"brawler":16000018,"winRate":42.8931,"useRate":1.12258,"starRate":0.696835},{"brawler":16000010,"winRate":42.293,"useRate":2.42211,"starRate":1.63839},{"brawler":16000041,"winRate":41.5225,"useRate":0.37811,"starRate":0.0165913},{"brawler":16000025,"winRate":41.2121,"useRate":0.221889,"starRate":0.0705131},{"brawler":16000026,"winRate":39.4737,"useRate":0.754146,"starRate":0.261313}]}}
+
 // parse json
- var jsonParsed = JSON.parse(jsonData);
+// var jsonParsed = JSON.parse(jsonData);
  
 // access elements
- const jsonOut = jsonParsed.map[0].imageUrl;
- // const jsonOut = "Command coming soon!";
+ // const jsonOut = jsonParsed.map[0].imageUrl;
+  const jsonOut = "Command coming soon!";
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
