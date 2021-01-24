@@ -37,9 +37,9 @@ client.on('ready', () => {
 
 const request = require('request');
 request({
-  url: 'https://api.starlist.pro/maps/',
+  url: 'https://api.starlist.pro/maps/15000004',
   headers: {
-    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzdGFybGlzdC5wcm8iLCJhdWQiOiJzdGFybGlzdC5wcm8iLCJzdWIiOiI2NzI5MzAyNTA1NzcwMTg4OTkiLCJpYXQiOjE2MTAzNzc4MjAsImp0aSI6ImF2M2prVVk0OUt6T0N4SldBUmVEMFp6eGtCTVFOcjJITXR3NmJKeXlxWDhzZjc3UzRCMDF5YWRya3AzWFVFSU9nY1JGWGFxV0VabnZaR2phVnM0bWxubTZ2MkRRQmtLR1hVUTJDTENVVVRlNzdwNXRJQ3E2THdsOURuR0tFcGU1SHVNY21qZzBkMUlvYlQ1dXZXUzBLVE'
+    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzdGFybGlzdC5wcm8iLCJhdWQiOiJzdGFybGlzdC5wcm8iLCJzdWIiOiI2NzI5MzAyNTA1NzcwMTg4OTkiLCJpYXQiOjE2MTE1MjYyMjAsImp0aSI6Imo5aTB4UmlmeDBjSW9XTUhSbU5wR21Zb3A5cXFzNE9MdGtZVGZaVFF5UUNlRU4wMVdKaVFmRlhYNnVkNDFQdVdlOFduTzRWM2dGemM3TUhlczRXQ1ZYWmZCTnVTREd3R1U5Zzgwd1NZQnlnc1pCMFFJdzhiRFh1TFpkSjVSUjVPdnRKazZ6ckFPdjc3S21ITlR6M2l1bEVBdlNvYVBNSWpxMzg2Smsxc2VFbWJVU3R4ZVV4VlprRDJ6YURBdDk2eWJLbmZVUm5Bb3lkM2FFSGdrcmJhbnBiTHBGTDJMaENRN29KUEVNbE9kM3ZBbEQ1c25ySU5TaDJQaWNHVXJ2NC0yNjQifQ.m-oyq2cbDSJrCgizmFk0i56FUDZgGx-m3sV6vaJtRENothoEba2buvF6JJi5dalWshp2sLHBPyB3ARgzpkQqDg'
   },
   rejectUnauthorized: false
 }, function(err, res) {
@@ -54,11 +54,11 @@ request({
 // var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
  
 // parse json
-// var jsonParsed = JSON.parse(request);
+ var jsonParsed = JSON.parse(request);
  
 // access elements
-// const jsonOut = jsonParsed.list[0].imageUrl;
-  const jsonOut = "Command coming soon!";
+ const jsonOut = jsonParsed.list[0].imageUrl;
+ // const jsonOut = "Command coming soon!";
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
