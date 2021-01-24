@@ -13,7 +13,7 @@ const welcome = require ('./welcome');
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
-client.on("ready", () => {
+client.on('ready', () => {
   // This event will run if the bot starts, and logs in, successfully.
   console.log(Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.);
   // Example of changing the bot's playing game to something useful. client.user is what the
