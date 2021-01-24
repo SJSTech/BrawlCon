@@ -34,7 +34,7 @@ client.on('ready', () => {
 	welcome(client);
 });
 
-const request = require('request');
+var jsonData = require('request');
 request({
   url: 'https://api.starlist.pro/maps/15000004',
   headers: {
@@ -53,7 +53,7 @@ request({
 // var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
  
 // parse json
- var jsonParsed = JSON.parse(request);
+ var jsonParsed = JSON.parse(jsonData);
  
 // access elements
  const jsonOut = jsonParsed.map[0].imageUrl;
