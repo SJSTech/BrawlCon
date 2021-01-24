@@ -31,14 +31,32 @@ client.on('ready', () => {
 	welcome(client);
 });
 
+
+const request = require('request');
+
+request({
+  url: 'https://api.starlist.pro/maps/15000004',
+  headers: {
+     'Authorization': 'Bearer ' + process.env.STARLIST_TOKEN
+  },
+  rejectUnauthorized: false
+}, function(err, res) {
+      if(err) {
+        console.error(err);
+      } else {
+        console.log(res.body);
+      }
+
+});
+
 // json data
-var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
+// var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
  
 // parse json
-var jsonParsed = JSON.parse(jsonData);
+var jsonParsed = JSON.parse(request);
  
 // access elements
- const jsonOut = jsonParsed.persons[0].name;
+ const jsonOut = jsonParsed.persons[0].imageUrl;
 //  const jsonOut = "test1";
 
 client.on("guildCreate", guild => {
