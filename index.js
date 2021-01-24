@@ -44,8 +44,8 @@ request({
 }, function(err, res) {
       if(err) {
         console.error(err);
-      } else {
-        console.log(res.body);
+    //  } else {
+    //    console.log(res.body);
       }
  });
 
@@ -53,11 +53,11 @@ request({
 // var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
  
 // parse json
-// var jsonParsed = JSON.parse(request);
+ var jsonParsed = JSON.parse(request);
  
 // access elements
-// const jsonOut = jsonParsed.list[0].imageUrl;
-  const jsonOut = "Command coming soon!";
+ const jsonOut = jsonParsed.map[0].imageUrl;
+ // const jsonOut = "Command coming soon!";
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
