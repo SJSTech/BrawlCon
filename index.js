@@ -45,7 +45,7 @@ request({
     if (!error && response.statusCode == 200) {
     var jsonArr = JSON.parse(body);
     console.log(jsonArr);
-    console.log("group id:" + jsonArr[0].id);
+    console.log("map:" + jsonArr.imageURL);
     }
   else {
         console.error(error);
