@@ -31,24 +31,24 @@ client.on('ready', () => {
 	welcome(client);
 });
 
-var request = require('request');
-request({
-  url: 'https://api.starlist.pro/maps/15000004',
-  headers: {
-    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzdGFybGlzdC5wcm8iLCJhdWQiOiJzdGFybGlzdC5wcm8iLCJzdWIiOiI2NzI5MzAyNTA1NzcwMTg4OTkiLCJpYXQiOjE2MTE1MjYyMjAsImp0aSI6Imo5aTB4UmlmeDBjSW9XTUhSbU5wR21Zb3A5cXFzNE9MdGtZVGZaVFF5UUNlRU4wMVdKaVFmRlhYNnVkNDFQdVdlOFduTzRWM2dGemM3TUhlczRXQ1ZYWmZCTnVTREd3R1U5Zzgwd1NZQnlnc1pCMFFJdzhiRFh1TFpkSjVSUjVPdnRKazZ6ckFPdjc3S21ITlR6M2l1bEVBdlNvYVBNSWpxMzg2Smsxc2VFbWJVU3R4ZVV4VlprRDJ6YURBdDk2eWJLbmZVUm5Bb3lkM2FFSGdrcmJhbnBiTHBGTDJMaENRN29KUEVNbE9kM3ZBbEQ1c25ySU5TaDJQaWNHVXJ2NC0yNjQifQ.m-oyq2cbDSJrCgizmFk0i56FUDZgGx-m3sV6vaJtRENothoEba2buvF6JJi5dalWshp2sLHBPyB3ARgzpkQqDg'
-  },
-  rejectUnauthorized: false
-}, function(error, response, body) {
-    if (!error && response.statusCode == 200) {
-    var jsonArr = JSON.parse(body);
-    console.log(jsonArr);
-    console.log("map:" + jsonArr.imageURL);
-    }
-  else {
-        console.error(error);
-    //    console.log(request.body);
-      }
- });
+// var request = require('request');
+// request({
+//  url: 'https://api.starlist.pro/maps/15000004',
+//  headers: {
+//    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJzdGFybGlzdC5wcm8iLCJhdWQiOiJzdGFybGlzdC5wcm8iLCJzdWIiOiI2NzI5MzAyNTA1NzcwMTg4OTkiLCJpYXQiOjE2MTE1MjYyMjAsImp0aSI6Imo5aTB4UmlmeDBjSW9XTUhSbU5wR21Zb3A5cXFzNE9MdGtZVGZaVFF5UUNlRU4wMVdKaVFmRlhYNnVkNDFQdVdlOFduTzRWM2dGemM3TUhlczRXQ1ZYWmZCTnVTREd3R1U5Zzgwd1NZQnlnc1pCMFFJdzhiRFh1TFpkSjVSUjVPdnRKazZ6ckFPdjc3S21ITlR6M2l1bEVBdlNvYVBNSWpxMzg2Smsxc2VFbWJVU3R4ZVV4VlprRDJ6YURBdDk2eWJLbmZVUm5Bb3lkM2FFSGdrcmJhbnBiTHBGTDJMaENRN29KUEVNbE9kM3ZBbEQ1c25ySU5TaDJQaWNHVXJ2NC0yNjQifQ.m-oyq2cbDSJrCgizmFk0i56FUDZgGx-m3sV6vaJtRENothoEba2buvF6JJi5dalWshp2sLHBPyB3ARgzpkQqDg'
+//  },
+//  rejectUnauthorized: false
+// }, function(error, response, body) {
+//   if (!error && response.statusCode == 200) {
+//    var jsonArr = JSON.parse(body);
+//    console.log(jsonArr);
+//    console.log("map:" + jsonArr.imageURL);
+//    }
+//  else {
+//        console.error(error);
+//        console.log(request.body);
+//      }
+// });
 // json data
 // var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
 // parse json
@@ -95,7 +95,6 @@ client.on("message", async message => {
     message.channel.send(jsonOut);
   }
 
-    
     if(command === "help") {
 const embed = new Discord.MessageEmbed()
   .setTitle("Commands")
@@ -207,6 +206,4 @@ const embed = new Discord.MessageEmbed()
   }
 });
 
-// client.login(token);
-// client.login(config.token);
 client.login(process.env.DISCORD_TOKEN);
