@@ -26,7 +26,7 @@ client.on("ready", () => {
         type: 'STREAMING',
         url: 'https://www.twitch.tv/wel3comco'
     }
-
+});
 
 
 
