@@ -91,9 +91,7 @@ client.on("message", async message => {
 return message.reply("LMAO tech boi duh");
 }
 	
-     if(command === "OWAOWA") {
-return message.reply("PREACH");
-}
+    
 	
 
 	
