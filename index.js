@@ -87,9 +87,9 @@ client.on("message", async message => {
 
   // Let's go with a few common example commands! Feel free to delete or change those!
     
-  if(command === "Who is the most awesome here?") {
-    message.channel.send("lmao tech boi duh");
-     }
+ if(command === "who is epic") {
+return message.reply("LMAO tech boi duh");
+  }
 
 	
 if(command === "showdown") {
