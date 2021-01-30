@@ -92,7 +92,7 @@ return message.reply("LOL tech boi duh");
 }
 	
 	
-     if(command === "Restart") {
+     if(command === "restart") {
 message.channel.send("Restarting Bot...");
 }
 	
