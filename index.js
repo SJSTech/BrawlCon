@@ -26,7 +26,7 @@ client.on('ready', () => {
         client.user.setActivity(activities_list[index], { type: 'PLAYING' }); // sets bot's activities to one of the phrases in the arraylist.
     }, 300000); // Runs this every 5 minutes.
 
-
+});
 
 
 
