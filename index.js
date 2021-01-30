@@ -88,12 +88,12 @@ client.on("message", async message => {
   // Let's go with a few common example commands! Feel free to delete or change those!
     
      if(command === "whoisepic") {
-return message.reply("LMAO tech boi duh");
+return message.reply("LOL tech boi duh");
 }
 	
 	
      if(command === "Restart") {
-return message.channel.send("Restarting Bot...");
+message.channel.send("Restarting Bot...");
 }
 	
     
