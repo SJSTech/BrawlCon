@@ -87,7 +87,7 @@ client.on("message", async message => {
 
   // Let's go with a few common example commands! Feel free to delete or change those!
     
-     if(command === "who is epic") {
+     if(command === "whoisepic") {
 return message.reply("LMAO tech boi duh");
 }
 
