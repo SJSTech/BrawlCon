@@ -87,7 +87,12 @@ client.on("message", async message => {
 
   // Let's go with a few common example commands! Feel free to delete or change those!
     
-  if(command === "showdown") {
+  if(command === "Who is the most awesome here?") {
+    message.channel.send("lmao tech boi duh");
+     }
+
+	
+if(command === "showdown") {
     // 
     // 
     message.channel.send(jsonOut);
