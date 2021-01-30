@@ -91,6 +91,11 @@ client.on("message", async message => {
 return message.reply("LMAO tech boi duh");
 }
 	
+	
+     if(command === "Restart") {
+return message.channel.send("Restarting Bot...");
+}
+	
     
 	
 
