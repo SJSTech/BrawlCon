@@ -92,12 +92,14 @@ return message.reply("LOL tech boi duh");
 }
 	
 	
-     if(command === "restart") {
-message.channel.send("Restarting Bot...");
+     //if(command === "restart") {
+//message.channel.send("Restarting Bot...");
 }
 	
-    
-	
+    if(command === "restart") {
+const m = await message.channel.send("Restarting...");
+    m.edit(`The bot has been restarted!`);
+  }	
 
 	
 if(command === "showdown") {
