@@ -9,7 +9,6 @@ const client = new Discord.Client();
 
 // Here we load the config.json file that contains our token and our prefix values. 
 const config = require("./package.json");
-const welcome = require ('./welcome');
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
@@ -26,8 +25,7 @@ client.on('ready', () => {
         client.user.setActivity(activities_list[index], { type: 'PLAYING' }); // sets bot's activities to one of the phrases in the arraylist.
     }, 300000); // Runs this every 5 minutes.
 
-	welcome(client)
-});	
+
 	
 // var request = require('request');
 // request({
