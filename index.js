@@ -93,7 +93,9 @@ return message.reply("LOL tech boi duh");
      if(command === "restart") {
 message.channel.send("Restarting Bot...");
 }
-	
+     if(command === "invite") {
+message.channel.send("discord.gg/An52dKBhbb");
+}
   
 
 	
