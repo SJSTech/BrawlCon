@@ -231,7 +231,7 @@ const embed = new Discord.MessageEmbed()
 	
 	if(command === "online") {
 const channel = client.channels.cache.get('798985952906575912');
-channel.send('<online:806564263975976980> The bot is fully online and should be running smoothly!');
+channel.send('The bot is fully online and should be running smoothly!');
 	}
 
 
