@@ -117,7 +117,6 @@ user.send('Bello Vibester');
 	
 	
 	
-	
      if(command === "help") {
 const embed = new Discord.MessageEmbed()
   .setTitle("Commands")
@@ -227,6 +226,19 @@ const embed = new Discord.MessageEmbed()
     message.channel.bulkDelete(fetched)
       .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
   }
+
+//status commands!
+	
+	if(command === "online") {
+const channel = client.channels.cache.get('798985952906575912');
+channel.send('801153017374048297 The bot is fully online and should be runnign smoothly!');
+	}
+
+
+
+
+
 });
+
 
 client.login(process.env.DISCORD_TOKEN);
