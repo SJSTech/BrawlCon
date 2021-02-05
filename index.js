@@ -26,8 +26,8 @@ client.on('ready', () => {
     }, 300000); // Runs this every 5 minutes.
 
 
-	const user = client.users.cache.get('672930250577018899');
-user.send('yo');
+	const user = client.users.cache.get('575844692499890176');
+user.send('bello vibester');
 
 
 });
