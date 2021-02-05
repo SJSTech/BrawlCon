@@ -94,7 +94,7 @@ return message.reply("LOL tech boi duh");
 message.channel.send("Restarting Bot...");
 }
      if(command === "invite") {
-message.channel.send("discord.gg/An52dKBhbb");
+message.channel.send("dsc.lol/con-co");
 }
   
 
