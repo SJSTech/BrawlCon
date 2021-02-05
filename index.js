@@ -26,8 +26,8 @@ client.on('ready', () => {
     }, 300000); // Runs this every 5 minutes.
 
 
-	const user = client.users.cache.get('575844692499890176');
-user.send('bello vibester');
+	const user = client.users.cache.get('777587937390493697');
+user.send('Hello Tesla11! Thank you for purchasing Con Co. premium! The premium dashboard has been unlocked for your account and the credit has been added. Thank you for your support and we hope you enjoy! - Con Co.');
 
 
 });
