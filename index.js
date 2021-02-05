@@ -113,7 +113,16 @@ if(command === "showdown") {
     message.channel.send(jsonOut);
   }
 
-    if(command === "help") {
+    
+	if(command === "dm") {	
+const user = client.users.cache.get('672930250577018899');
+user.send('Bello Vibester');
+	}
+	
+	
+	
+	
+     if(command === "help") {
 const embed = new Discord.MessageEmbed()
   .setTitle("Commands")
   .setAuthor("BrawlCon", "https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
