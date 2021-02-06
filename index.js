@@ -35,9 +35,17 @@ const options = {
   }
 };
 
-request(options, function(err, res, body) {
+request(options, function(error, response, body) {
   let json = JSON.parse(body);
-  console.log(json);
+
+    // Printing the error if occurred 
+    if(error) console.log(error) 
+    
+    // Printing status code 
+    console.log(response.statusCode); 
+      
+    // Printing body 
+    console.log(body);
 });
 
 //req('https://api.brawlify.pro/maps/15000004', rejectUnauthorized: false, function(err, res, body) {
