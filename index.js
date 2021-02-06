@@ -24,7 +24,8 @@ client.on('ready', () => {
         const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
         client.user.setActivity(activities_list[index], { type: 'PLAYING' }); // sets bot's activities to one of the phrases in the arraylist.
     }, 300000); // Runs this every 5 minutes.
-
+const channel = client.channels.cache.get('798985952906575912');
+channel.send('The Bot has been restarted and is now back online!');
 
 });
 
