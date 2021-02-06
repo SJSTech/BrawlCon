@@ -26,6 +26,10 @@ client.on('ready', () => {
     }, 300000); // Runs this every 5 minutes.
 const channel = client.channels.cache.get('798985952906575912');
 channel.send('The Bot has been restarted and is now back online!');
+const blockedUsers = [ 806931586549284864];
+client.on('message', message => {
+	if (blockedUsers.includes(message.author.id)) return;
+});
 
 });
 
