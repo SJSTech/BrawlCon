@@ -27,28 +27,29 @@ channel.send('The Bot has been restarted and is now back online!');
 
 });
 	
- var request = require('request');
- request({
-  url: 'https://api.brawlify.pro/maps/15000004',
+let req = request.defaults({
   headers: {
-    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJicmF3bGlmeS5jb20iLCJhdWQiOiJicmF3bGlmeS5jb20iLCJzdWIiOiI2NzI5MzAyNTA1NzcwMTg4OTkiLCJpYXQiOjE2MTI2NDg5NTYsImp0aSI6InNqejJFRWVKY1ViVUM0N1JybHdSQjNsWGptd0VsblVackFzM1NETWNSV3dQVnlCNUJSYWVrdXkxOHNoRVFvZmVGRVhvMXprRG9KQW41Z2dJY1ZWOTJpdFJETE05T3VydmRGdnVqZnpxaWlRekpZMG9rY1FLVFkwV0laSGRlcllMZGNBTEZTV3ZaVDBTc0t1Z3BoMFZ4QjhDYW9PeU1WWFcwcG1mcG5XbkdzdjZpNk82MU9GVFE3d0syTjYzRGFJWGpnVFlMUXlsQng4Tmh3SFpPNG10cGhtU1NsSjRucGdkSEk5dEwzeFBhYU1xQVBiWU54bTU2QXFiZkt6R0c3NC0yNjcifQ.T8bCTpTkpOW98N4miRFtIN0fbiiPCObc_XPYYJSKTg9apccuF5ix3hgtVcg_LIRd-hY0L_naD7h9-VwyVKvkvw'
-  },
-  rejectUnauthorized: false
- }, function(error, response, body) {
-   if (!error && response.statusCode == 200) {
-    var jsonArr = JSON.parse(body);
-    console.log(jsonArr);
-    console.log("map:" + jsonArr.imageURL);
+      'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJicmF3bGlmeS5jb20iLCJhdWQiOiJicmF3bGlmeS5jb20iLCJzdWIiOiI2NzI5MzAyNTA1NzcwMTg4OTkiLCJpYXQiOjE2MTI2NDg5NTYsImp0aSI6InNqejJFRWVKY1ViVUM0N1JybHdSQjNsWGptd0VsblVackFzM1NETWNSV3dQVnlCNUJSYWVrdXkxOHNoRVFvZmVGRVhvMXprRG9KQW41Z2dJY1ZWOTJpdFJETE05T3VydmRGdnVqZnpxaWlRekpZMG9rY1FLVFkwV0laSGRlcllMZGNBTEZTV3ZaVDBTc0t1Z3BoMFZ4QjhDYW9PeU1WWFcwcG1mcG5XbkdzdjZpNk82MU9GVFE3d0syTjYzRGFJWGpnVFlMUXlsQng4Tmh3SFpPNG10cGhtU1NsSjRucGdkSEk5dEwzeFBhYU1xQVBiWU54bTU2QXFiZkt6R0c3NC0yNjcifQ.T8bCTpTkpOW98N4miRFtIN0fbiiPCObc_XPYYJSKTg9apccuF5ix3hgtVcg_LIRd-hY0L_naD7h9-VwyVKvkvw'
+  }
+});
+
+req('https://api.brawlify.pro/maps/15000004', rejectUnauthorized: false, function(err, res, body) {
+  if (!error && response.statusCode == 200) {
+    console.log(body);
+   // var jsonArr = JSON.parse(body);
+   var jsonParsed = JSON.parse(body);
+   // console.log("map:" + jsonParsed.imageURL);
     }
   else {
         console.error(error);
         console.log(request.body);
       }
- });
+});
+
 // json data
 // var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
 // parse json
- var jsonParsed = JSON.parse(jsonArr);
+ 
  
 // access elements
   const jsonOut = jsonParsed.map[1].imageUrl;
