@@ -23,8 +23,6 @@ client.on("ready", () => {
  //client.user.setPresence({ activity: { name: 'Restarting Systems' }, status: 'dnd' });
 const channel = client.channels.cache.get('798985952906575912');
 channel.send('The Bot has been restarted and is now back online!');
-
-
 });
 	
 let req = request.defaults({
@@ -33,27 +31,26 @@ let req = request.defaults({
   }
 });
 
-req('https://api.brawlify.pro/maps/15000004', rejectUnauthorized: false, function(err, res, body) {
-  if (!error && response.statusCode == 200) {
-    console.log(body);
+//req('https://api.brawlify.pro/maps/15000004', rejectUnauthorized: false, function(err, res, body) {
+//  if (!error && response.statusCode == 200) {
+//    console.log(body);
    // var jsonArr = JSON.parse(body);
-   var jsonParsed = JSON.parse(body);
+//   var jsonParsed = JSON.parse(body);
    // console.log("map:" + jsonParsed.imageURL);
-    }
-  else {
-        console.error(error);
-        console.log(request.body);
-      }
-});
+//    }
+//  else {
+//        console.error(error);
+//        console.log(request.body);
+//     }
+//});
 
 // json data
 // var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
 // parse json
  
- 
 // access elements
-  const jsonOut = jsonParsed.map[1].imageUrl;
-  // const jsonOut = "Command coming soon!";
+//  const jsonOut = jsonParsed.map[1].imageUrl;
+   const jsonOut = "Command coming soon!";
 
 client.on("guildCreate", guild => {
   // This event triggers when the bot joins a guild.
