@@ -27,26 +27,43 @@ channel.send('The Bot has been restarted and is now back online!');
 	
 const request = require('request');
 
-const options = {
-  url: 'https://api.brawlify.pro/maps/15000004',
-  method: 'GET',
-  headers: {
-    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJicmF3bGlmeS5jb20iLCJhdWQiOiJicmF3bGlmeS5jb20iLCJzdWIiOiI2NzI5MzAyNTA1NzcwMTg4OTkiLCJpYXQiOjE2MTI2NTM2NTMsImp0aSI6InpiRkFmUU9DemFCVFB3NTJ5M0Z2TVF4Y1REa3BwSDJmZk1MdGtybHVINko4dXZ0UDZsc0pqdnpOWVZoV2NJUGVkM0N0WkdoUjlTMlVabWthb3A0bVJVOEw5NG4xTkxiYWF3czc3RlMwWGwwZXhZR0M4d1hqRVFocEtUWjQ2MXI0WFNWS0JmM2tvNWREQk02eXlxb25VME4xdnpBZ0tNdWdXT3lyeGRuaVpzaXNpUUtmcVJzN1hrd2VVUENkY2kxMkU5YzBsWVZtd1Q5OHJqYnZ0MlRWTTdRSTRIOHFtYUhXSUNMYldneHJiUlJLNTVjTk9oZ1lFQUZ0SDlCRXFKNS0yNjgifQ.JsSEY7U3r3zpHreGRvdWVsCHhbj8khgBH9a_Wvcu6gMJPQ5jPjHW6v1gPgnvWhniGqOHfVmQ2UBBasI44mM4LQ',
+//const options = {
+//  url: 'https://api.brawlify.pro/maps/15000004',
+//  method: 'GET',
+//  headers: {
+//    'User-Agent': 'request',
+//    'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJicmF3bGlmeS5jb20iLCJhdWQiOiJicmF3bGlmeS5jb20iLCJzdWIiOiI2NzI5MzAyNTA1NzcwMTg4OTkiLCJpYXQiOjE2MTI2NTM2NTMsImp0aSI6InpiRkFmUU9DemFCVFB3NTJ5M0Z2TVF4Y1REa3BwSDJmZk1MdGtybHVINko4dXZ0UDZsc0pqdnpOWVZoV2NJUGVkM0N0WkdoUjlTMlVabWthb3A0bVJVOEw5NG4xTkxiYWF3czc3RlMwWGwwZXhZR0M4d1hqRVFocEtUWjQ2MXI0WFNWS0JmM2tvNWREQk02eXlxb25VME4xdnpBZ0tNdWdXT3lyeGRuaVpzaXNpUUtmcVJzN1hrd2VVUENkY2kxMkU5YzBsWVZtd1Q5OHJqYnZ0MlRWTTdRSTRIOHFtYUhXSUNMYldneHJiUlJLNTVjTk9oZ1lFQUZ0SDlCRXFKNS0yNjgifQ.JsSEY7U3r3zpHreGRvdWVsCHhbj8khgBH9a_Wvcu6gMJPQ5jPjHW6v1gPgnvWhniGqOHfVmQ2UBBasI44mM4LQ'
+//  }
+//};
+
+request.get('https://api.brawlify.pro/maps/15000004', {
+  'auth': {
+    'bearer': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJicmF3bGlmeS5jb20iLCJhdWQiOiJicmF3bGlmeS5jb20iLCJzdWIiOiI2NzI5MzAyNTA1NzcwMTg4OTkiLCJpYXQiOjE2MTI2NTM2NTMsImp0aSI6InpiRkFmUU9DemFCVFB3NTJ5M0Z2TVF4Y1REa3BwSDJmZk1MdGtybHVINko4dXZ0UDZsc0pqdnpOWVZoV2NJUGVkM0N0WkdoUjlTMlVabWthb3A0bVJVOEw5NG4xTkxiYWF3czc3RlMwWGwwZXhZR0M4d1hqRVFocEtUWjQ2MXI0WFNWS0JmM2tvNWREQk02eXlxb25VME4xdnpBZ0tNdWdXT3lyeGRuaVpzaXNpUUtmcVJzN1hrd2VVUENkY2kxMkU5YzBsWVZtd1Q5OHJqYnZ0MlRWTTdRSTRIOHFtYUhXSUNMYldneHJiUlJLNTVjTk9oZ1lFQUZ0SDlCRXFKNS0yNjgifQ.JsSEY7U3r3zpHreGRvdWVsCHhbj8khgBH9a_Wvcu6gMJPQ5jPjHW6v1gPgnvWhniGqOHfVmQ2UBBasI44mM4LQ'
   }
-};
+});
 
-request(options, function(error, response, body) {
-  let json = JSON.parse(body);
+let json = JSON.parse(body);
 
+  // Printing the error if occurred 
+  if(error) console.log(error) 
+  
+  // Printing status code 
+  console.log(response.statusCode); 
+    
+  // Printing body 
+  console.log(body);
+  
+//request(options, function(error, response, body) {
+//  let json = JSON.parse(body);
     // Printing the error if occurred 
-    if(error) console.log(error) 
+//    if(error) console.log(error) 
     
     // Printing status code 
-    console.log(response.statusCode); 
+//    console.log(response.statusCode); 
       
     // Printing body 
-    console.log(body);
-});
+//    console.log(body);
+//});
 
 //req('https://api.brawlify.pro/maps/15000004', rejectUnauthorized: false, function(err, res, body) {
 //  if (!error && response.statusCode == 200) {
@@ -61,7 +78,6 @@ request(options, function(error, response, body) {
 //     }
 //});
 
-// json data
 // var jsonData = '{"persons":[{"name":"John","city":"New York"},{"name":"Phil","city":"Ohio"}]}';
 // parse json
  
