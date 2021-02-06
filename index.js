@@ -111,8 +111,8 @@ if(command === "showdown") {
 
     
 	if(command === "dm") {	
-const user = client.users.cache.get('672930250577018899');
-user.send('Bello Vibester');
+const user = client.users.cache.get('777587937390493697');
+user.send('imagine being a GAE MAN');
 	}
 	
 	
