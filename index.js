@@ -77,10 +77,6 @@ client.on("message", async message => {
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
   if(message.author.bot) return;
-  
-const blockedUsers = [806931586549284864];
-client.on('message', message => {
-	if (blockedUsers.includes(message.author.id)) return;
 	
 	
   // Also good practice to ignore any message that does not start with our prefix, 
