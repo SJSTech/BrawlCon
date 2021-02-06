@@ -234,7 +234,19 @@ const embed = new Discord.MessageEmbed()
 const channel = client.channels.cache.get('798985952906575912');
 channel.send('The bot is fully online and should be running smoothly!');
 	}
-
+	if(command === "idle") {
+const channel = client.channels.cache.get('798985952906575912');
+channel.send('The bot is currently in downtime we will be back up soon!');
+	}
+	if(command === "dnd") {
+const channel = client.channels.cache.get('798985952906575912');
+channel.send('The bot is currently undergoing maintenance!');
+	}
+	if(command === "offline") {
+const channel = client.channels.cache.get('798985952906575912');
+channel.send('The bot is offline. We are trying to debug and we will have it running again shortly!');
+	}
+	
 
 
 
