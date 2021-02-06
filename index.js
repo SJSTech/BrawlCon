@@ -78,7 +78,7 @@ client.on("message", async message => {
   // and not get into a spam loop (we call that "botception").
   if(message.author.bot) return;
   
-const blockedUsers = [ 806931586549284864];
+const blockedUsers = [806931586549284864];
 client.on('message', message => {
 	if (blockedUsers.includes(message.author.id)) return;
 	
@@ -94,6 +94,9 @@ client.on('message', message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
+	
+
+	
   // Let's go with a few common example commands! Feel free to delete or change those!
     
      if(command === "whoisepic") {
