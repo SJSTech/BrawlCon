@@ -111,10 +111,12 @@ if(command === "showdown") {
   }
 
     
-	if(command === "dm") {	
-const user = client.users.cache.get('777587937390493697');
-user.send('imagine being a GAE MAN');
-	}
+	if(command === "st-dm") {
+const user = message.mentions.users.first();
+const dmContent = args.join(" ");
+user.send(dmContent);
+message.channel.send("Sent. \n \n **Notice** \n if you did not mention a user, the message failed to send. Also, a valid user (not a bot, a user from outside my servers, or a role) is needed to complete.");
+}
 	
 	
 	
