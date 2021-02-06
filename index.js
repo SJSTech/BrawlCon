@@ -14,19 +14,13 @@ const config = require("./package.json");
 
 client.on("ready", () => {
   // This event will run if the bot starts, and logs in, successfully.
-  console.log(Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.);
-  // Example of changing the bot's playing game to something useful. client.user is what the
+  console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
+  // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
- // client.user.setActivity(Serving ${client.guilds.cache.size} servers);
- //client.user.setActivity(Con Co. | -bc help);
- //client.user.setActivity('Con Co. | -bc help', { type: 'LISTENING' });
- //client.user.setActivity('Brawl Talk | -bc help', { type: 'WATCHING' });
- //client.user.setActivity('Brawl Stars | -bc help');
- //client.user.setStatus('dnd');
- client.user.setPresence({ activity: { name: 'Maintenance in progress | Con Co.' }, status: 'dnd' });
- //client.user.setPresence({ activity: { name: 'Downtime | Con Co.' }, status: 'idle' });
- //client.user.setPresence({ activity: { name: 'Offline' }, status: 'dnd' });
-});
+ // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
+ //client.user.setActivity('Con Co. | --bc help', { type: 'PLAYING' });
+ client.user.setPresence({ activity: { name: 'Con Co. | Maintenance in Progress!' }, status: 'idle' });
+ //client.user.setPresence({ activity: { name: 'Restarting Systems' }, status: 'dnd' });
 const channel = client.channels.cache.get('798985952906575912');
 channel.send('The Bot has been restarted and is now back online!');
 
