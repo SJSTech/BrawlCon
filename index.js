@@ -199,7 +199,7 @@ const embed = new Discord.MessageEmbed()
   
   if(command === "kick") {
      if (message.author.id === '672930250577018899') {
-     return message.reply("Sorry, you don't have permissions to use this command!");
+     else message.reply("Sorry, you don't have permissions to use this command!");
 const member = message.mentions.members.first();
      member.kick();
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
