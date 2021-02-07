@@ -151,6 +151,13 @@ user.send(dmContent);
 message.channel.send("Sent. \n \n **Notice** \n if you did not mention a user, the message failed to send. Also, a valid user (not a bot, a user from outside my servers, or a role) is needed to complete.");
 }
 	
+	if(command === "st-channel") {
+const channel = message.mentions.channels.first();
+const chContent = args.join(" ").slice(21);
+channel.send(chContent);
+message.channel.send("Sent. \n \n **Notice** \n if you did not tag a channel, the message failed to send. Also, a valid channel (not a bot, a user from outside my servers, a role, or a deleted channel) is needed to complete.");
+}
+	
 	
      if(command === "help") {
 const embed = new Discord.MessageEmbed()
