@@ -173,7 +173,7 @@ const embed = new Discord.MessageEmbed()
   .addFields(
 	{ name: 'Prefix', value: 'Our prefix is -bc', inline: true },
 	{ name: 'help', value: 'Message with all the commands', inline: true },
-	{ name: '<map>', value: 'show the map you specified', inline: true },
+	{ name: 'map <mapname>', value: 'shows the map you specified', inline: true },
         { name: '<brawler>', value: 'Shows the specified brawler stats', inline: true },
         { name: '<gamemode>', value: 'Shows details and stats about the specified gamemode', inline: true },
         { name: '<club>', value: 'Shows the specified club stats', inline: true },
