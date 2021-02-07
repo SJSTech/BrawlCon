@@ -168,7 +168,6 @@ const embed = new Discord.MessageEmbed()
   /*
    * Takes a Date object, defaults to current date.
    */
-  .setTimestamp()
   .setURL("")
   .addFields(
 	{ name: 'Prefix', value: 'Our prefix is -bc', inline: true },
