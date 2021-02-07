@@ -198,7 +198,7 @@ const embed = new Discord.MessageEmbed()
   }
   
   if(command === "kick") {
-     if(!message.member.roles.cache.some(r=>["806921125132238918"].includes(r.name)))
+     if(message.member.roles.find(r => r.name === "Head Moderator")){
      else message.reply("Sorry, you don't have permissions to use this command!");
 const member = message.mentions.members.first();
      member.kick();
