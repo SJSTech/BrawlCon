@@ -162,7 +162,7 @@ const embed = new Discord.MessageEmbed()
    */
   .setColor(0xff0909)
   .setDescription("")
-  .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
+  .setFooter("Copyright Con Co. and BrawlCon | Contact @Techboy9#0001 for questions or concerns", "https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
   .setImage("")
   .setThumbnail("https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
   /*
