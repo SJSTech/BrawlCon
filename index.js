@@ -113,9 +113,7 @@ message.channel.send("Restarting Bot...");
      if(command === "invite") {
 message.channel.send("https://dsc.lol/con-co");
 }
-     if(command == "map") {
-message.channel.reply("Make sure to specify the map name!");	     
-}
+   
 	
 if(command === "map") {
 
