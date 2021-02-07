@@ -198,15 +198,16 @@ const embed = new Discord.MessageEmbed()
   }
   
   if(command === "kick") {
-	if (message.author.id === '672930250577018899') {
-	const member = message.mentions.members.first();
+     if (message.author.id === '672930250577018899'){
+     const member = message.mentions.members.first();
      member.kick();
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
     // Please read on Array.some() to understand this bit: 
     // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
     const reason = args.join(" ").slice(23);
-    message.channel.send("User has been kicked! Reason is below (if provided)")
+    message.reply ("User was banned! Reason is below (if provided)")
     message.channel.send(reason)
+  }
   }
   
   if(command === "ban") {
