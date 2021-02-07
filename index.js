@@ -200,11 +200,15 @@ const embed = new Discord.MessageEmbed()
   }
   
   if(command === "kick") {
+     const member = message.mentions.members.first();
+     member.kick();
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
     // Please read on Array.some() to understand this bit: 
     // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
-    if(!message.member.roles.cache.some(r=>["Admin", "672930250577018899"].includes(r.name)))
-      return message.reply("Sorry, you don't have permissions to use this!");
+    const reason = args.join(" ").slice(23);
+    message.channel.send("User has been kicked! Reason Below (If provided)")
+    message.channel.send(reason)
+  }
     
     // Let's first check if we have a member and if we can kick them!
     // message.mentions.members is a collection of people that have been mentioned, as GuildMembers.
