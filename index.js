@@ -123,9 +123,9 @@ if(command === "map") {
     function capitalize(mapMessage) {
       return mapMessage.charAt(0).toUpperCase() + mapMessage.slice(1);
     }
-    const mapMessage = mapMessage.split(' ').map(capitalize).join(' ');
+    const mapMessageCase = mapMessage.split(' ').map(capitalize).join(' ');
     // message.delete().catch(O_o=>{});  
-    mapMessageReturn = 'https://cdn.brawlify.com/map/' + mapMessage + '.png';
+    mapMessageReturn = 'https://cdn.brawlify.com/map/' + mapMessageCase + '.png';
     message.channel.send(mapMessageReturn);
   }
 
