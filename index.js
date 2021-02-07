@@ -127,7 +127,7 @@ if(command === "map") {
 }
     mapMessageReturn = mapWords.join("-");
 
-    if)mapMessageReturn === "Eye-Of-The-Storm") {
+    if(mapMessageReturn === "Eye-Of-The-Storm") {
 
       mapMessageReturn = "Eye-of-the-Storm";
     }
