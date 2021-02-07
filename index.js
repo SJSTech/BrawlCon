@@ -131,6 +131,12 @@ if(command === "map") {
 
       mapMessageReturn = "Eye-of-the-Storm";
     }
+
+    if(mapMessageReturn === "Nruhc-Nrevac") {
+
+      mapMessageReturn = "nruhC-nrevaC";
+    }
+    
     // message.delete().catch(O_o=>{});  
     mapMessageReturn = 'https://cdn.brawlify.com/map/' + mapMessageReturn + '.png';
     message.channel.send(mapMessageReturn);
