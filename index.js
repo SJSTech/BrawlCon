@@ -126,6 +126,11 @@ if(command === "map") {
       mapWords[i] = mapWords[i][0].toUpperCase() + mapWords[i].substr(1);
 }
     mapMessageReturn = mapWords.join("-");
+
+    if)mapMessageReturn === "Eye-Of-The-Storm") {
+
+      mapMessageReturn = "Eye-of-the-Storm";
+    }
     // message.delete().catch(O_o=>{});  
     mapMessageReturn = 'https://cdn.brawlify.com/map/' + mapMessageReturn + '.png';
     message.channel.send(mapMessageReturn);
