@@ -118,10 +118,10 @@ message.channel.send("https://dsc.lol/con-co");
 	
 if(command === "map") {
 
-    const mapMessage = args.join(" ");
+    const mapMessageCased = args.join(" ");
 
-    mapMessage = mapMessage.toLowerCase();
-    
+    mapMessage = mapMessageCased.toLowerCase();
+
     const mapWords = mapMessage.split(" ");
 
     for (let i = 0; i < mapWords.length; i++) {
