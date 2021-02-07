@@ -147,7 +147,7 @@ if(command === "map") {
     
 	if(command === "st-dm") {
 const user = message.mentions.users.first();
-const dmContent = args.join(" ");
+const dmContent = args.join(" ").slice(23);
 user.send(dmContent);
 message.channel.send("Sent. \n \n **Notice** \n if you did not mention a user, the message failed to send. Also, a valid user (not a bot, a user from outside my servers, or a role) is needed to complete.");
 }
