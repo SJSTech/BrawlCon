@@ -212,9 +212,10 @@ const embed = new Discord.MessageEmbed()
   
  
 if(command === "status") {
-if (message.author.id === '777587937390493697');
+if (message.author.id === '672930250577018899'){
 const newStatus = args.join(" ");
 client.user.setActivity(newStatus);
+}
 }
 	
 	
