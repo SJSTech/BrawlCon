@@ -128,7 +128,7 @@ if(command === "map") {
     mapMessageReturn = mapWords.join("-");
     // message.delete().catch(O_o=>{});  
     mapMessageReturn = 'https://cdn.brawlify.com/map/' + mapMessageReturn + '.png';
-    message.channel.send(mapWords);
+    message.channel.send(mapMessageReturn);
   }
 
     
