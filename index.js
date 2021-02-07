@@ -206,7 +206,7 @@ const embed = new Discord.MessageEmbed()
     // Please read on Array.some() to understand this bit: 
     // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
     const reason = args.join(" ").slice(23);
-    message.channel.send("User has been kicked! Reason Below (If provided)")
+    message.channel.send("Reason Below (If specified)")
     message.channel.send(reason)
   }
     
