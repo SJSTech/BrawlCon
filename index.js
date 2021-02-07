@@ -119,6 +119,11 @@ message.channel.send("https://dsc.lol/con-co");
 if(command === "map") {
 
     const mapMessage = args.join(" ");
+     
+    function capitalize(mapMessage) {
+      return mapMessage.charAt(0).toUpperCase() + mapMessage.slice(1);
+    }
+    const mapMessage = mapMessage.split(' ').map(capitalize).join(' ');
     // message.delete().catch(O_o=>{});  
     mapMessageReturn = 'https://cdn.brawlify.com/map/' + mapMessage + '.png';
     message.channel.send(mapMessageReturn);
