@@ -210,7 +210,16 @@ const embed = new Discord.MessageEmbed()
   }
   }
   
-  if(command === "ban") {
+ 
+if(command === "status") {
+if (message.author.id === '777587937390493697');
+const newStatus = args.join(" ");
+client.user.setActivity(newStatus);
+}
+	
+	
+	
+	if(command === "ban") {
     // Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
     if(!message.member.roles.cache.some(r=>["806921125132238918"].includes(r.name)))
