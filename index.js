@@ -125,10 +125,10 @@ if(command === "map") {
     for (let i = 0; i < mapWords.length; i++) {
       mapWords[i] = mapWords[i][0].toUpperCase() + mapWords[i].substr(1);
 }
-    mapWords.join("-");
+    mapMessageReturn = mapWords.join("-");
     // message.delete().catch(O_o=>{});  
-    mapMessageReturn = 'https://cdn.brawlify.com/map/' + mapWords + '.png';
-    message.channel.send(mapMessageReturn);
+    mapMessageReturn = 'https://cdn.brawlify.com/map/' + mapMessageReturn + '.png';
+    message.channel.send(mapWords);
   }
 
     
