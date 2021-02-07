@@ -120,6 +120,8 @@ if(command === "map") {
 
     const mapMessage = args.join(" ");
 
+    mapMessage = mapMessage.toLowerCase();
+    
     const mapWords = mapMessage.split(" ");
 
     for (let i = 0; i < mapWords.length; i++) {
@@ -136,7 +138,7 @@ if(command === "map") {
 
       mapMessageReturn = "nruhC-nrevaC";
     }
-    
+
     // message.delete().catch(O_o=>{});  
     mapMessageReturn = 'https://cdn.brawlify.com/map/' + mapMessageReturn + '.png';
     message.channel.send(mapMessageReturn);
