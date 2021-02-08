@@ -283,21 +283,7 @@ const channel = client.channels.cache.get('798985952906575912');
 channel.send('The bot is offline. We are trying to debug and we will have it running again shortly!');
 	}
 	
-if(command === "status") {
-const icon = args[0];
-const text = args[1];
-const mode = args[2];
-const www = args[3];
-client.user.setPresence({
-    status: icon,
-    activity: {
-        name: text,
-        type: mode,
-        url: www
-    }
-})
-message.channel.send("Your status was set as " + icon + " for the icon, " + text + " for the status text, " + mode + " for the mode, " + " and " + www + " for stream url.");
-}
+
 
 
 
