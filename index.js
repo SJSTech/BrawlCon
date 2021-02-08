@@ -219,6 +219,7 @@ const embed = new Discord.MessageEmbed()
   
  
 if(command === "status") {
+if (message.author.id === '672930250577018899'){
 const icon = args[0];
 const text = args.slice(3).join(" ");
 const mode = args[1];
@@ -233,7 +234,7 @@ client.user.setPresence({
 })
 message.reply("Your status was set as " + icon + " for the icon, " + text + " for the status text, " + mode + " for the mode, " + " and " + www + " for stream url.")
 }
-
+}
 	
 	
 	
