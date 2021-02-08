@@ -220,9 +220,9 @@ const embed = new Discord.MessageEmbed()
  
 if(command === "status") {
 const icon = args[0];
-const text = args[1];
-const mode = args[2];
-const www = args[3];
+const text = args.slice(3).join(" ");
+const mode = args[1];
+const www = args[2];
 client.user.setPresence({
     status: icon,
     activity: {
@@ -231,8 +231,9 @@ client.user.setPresence({
         url: www
     }
 })
-message.channel.send("Your status was set as " + icon + " for the icon, " + text + " for the status text, " + mode + " for the mode, " + " and " + www + " for stream url.");
+message.reply("Your status was set as " + icon + " for the icon, " + text + " for the status text, " + mode + " for the mode, " + " and " + www + " for stream url.")
 }
+
 	
 	
 	
