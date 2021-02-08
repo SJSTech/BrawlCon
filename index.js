@@ -187,7 +187,10 @@ const embed = new Discord.MessageEmbed()
   message.channel.send(embed);
 }
 
-  if(command === "ping") {
+  
+	
+	
+	if(command === "ping") {
     // Calculates ping between sending a message and editing it, giving a nice round-trip latency.
     // The second ping is an average latency between the bot and the websocket server (one-way, not round-trip)
     const m = await message.channel.send("Loading...");
@@ -204,18 +207,34 @@ const embed = new Discord.MessageEmbed()
     message.channel.send(sayMessage);
   }
   
-  if(command === "kick") {
+if(command === "purge") {
+    // This command removes all messages from all users in the channel, up to 100.
+    
+    // get the delete count, as an actual number.
+    const deleteCount = parseInt(args[0], 10);
+    
+    // Ooooh nice, combined conditions. <3
+    if(!deleteCount || deleteCount < 2 || deleteCount > 100)
+      return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
+    
+    // So we get our messages, and delete them. Simple enough, right?
+    const fetched = await message.channel.messages.fetch({limit: deleteCount});
+    message.channel.bulkDelete(fetched)
+      .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
+  }	
+	
+//mod and admin commands. These will only be avaliable to Techboy9.
+  
+if(command === "kick") {
      if (message.author.id === '672930250577018899'){
      const member = message.mentions.members.first();
      member.kick();
     // This command must be limited to mods and admins. In this example we just hardcode the role names.
-    // Please read on Array.some() to understand this bit: 
-    // https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/some?
     const reason = args.join(" ").slice(23);
-    message.reply ("User was kicked! Reason is below (if provided)")
-    message.channel.send(reason)
-  }
-  }
+    const taggedUser = message.mentions.users.first();
+    message.reply("You have kicked " + taggedUser.username + " and your reason was (this will only show up if provided) " + reason + ".");
+     }
+     }
   
  
 if(command === "status") {
@@ -238,61 +257,20 @@ message.reply("Your status was set as " + icon + " for the icon, " + text + " fo
 	
 	
 	
-	if(command === "ban") {
-    // Most of this command is identical to kick, except that here we'll only let admins do it.
-    // In the real world mods could ban too, but this is just an example, right? ;)
-    if(!message.member.roles.cache.some(r=>["806921125132238918"].includes(r.name)))
-      return message.reply("Sorry, you don't have permissions to use this!");
-    
-    let member = message.mentions.members.first();
-    if(!member)
-      return message.reply("Please mention a valid member of this server");
-    if(!member.bannable) 
-      return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
-
-    let reason = args.slice(1).join(' ');
-    if(!reason) reason = "No reason provided";
-    
-    await member.ban(reason)
-      .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
-    message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
-  }
+if(command === "ban") {
+     if (message.author.id === '672930250577018899'){
+     const member = message.mentions.members.first();
+     member.ban();
+    const reason = args.join(" ").slice(23);
+    const taggedUser = message.mentions.users.first();
+    message.reply("You have banned " + taggedUser.username + " and your reason was (this will only show up if provided) " + reason + ".");
+     }
+     }
+   
   
-  if(command === "purge") {
-    // This command removes all messages from all users in the channel, up to 100.
-    
-    // get the delete count, as an actual number.
-    const deleteCount = parseInt(args[0], 10);
-    
-    // Ooooh nice, combined conditions. <3
-    if(!deleteCount || deleteCount < 2 || deleteCount > 100)
-      return message.reply("Please provide a number between 2 and 100 for the number of messages to delete");
-    
-    // So we get our messages, and delete them. Simple enough, right?
-    const fetched = await message.channel.messages.fetch({limit: deleteCount});
-    message.channel.bulkDelete(fetched)
-      .catch(error => message.reply(`Couldn't delete messages because of: ${error}`));
-  }
+  
 
-//status commands!
-	
-	if(command === "online") {
-const channel = client.channels.cache.get('798985952906575912');
-channel.send('The bot is fully online and should be running smoothly!');
-	}
-	if(command === "idle") {
-const channel = client.channels.cache.get('798985952906575912');
-channel.send('The bot is currently in downtime we will be back up soon!');
-	}
-	if(command === "dnd") {
-const channel = client.channels.cache.get('798985952906575912');
-channel.send('The bot is currently undergoing maintenance!');
-	}
-	if(command === "offline") {
-const channel = client.channels.cache.get('798985952906575912');
-channel.send('The bot is offline. We are trying to debug and we will have it running again shortly!');
-	}
-	
+
 
 
 
