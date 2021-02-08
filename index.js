@@ -153,7 +153,7 @@ if(command === "map") {
 	
 	
 	if(command === "leave") {
-	connection.disconnect();
+	voiceChannel.leave();
 	}
 	
 	
