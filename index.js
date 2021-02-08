@@ -148,7 +148,7 @@ if(command === "map") {
 	if (message.member.voice.channel) {
 	  const connection = await message.member.voice.channel.join();
 	}
-});
+	}
 	
 	
 	
