@@ -153,7 +153,7 @@ if(command === "map") {
 	
 	
 	if(command === "leave") {
-	voiceChannel.leave();
+	client.leaveVoiceChannel
 	}
 	
 	
