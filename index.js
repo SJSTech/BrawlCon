@@ -152,8 +152,9 @@ if(command === "map") {
 	
 	
 	
-	
-	
+	if(command === "leave") {
+	connection.disconnect();
+	}
 	
 	
 	
