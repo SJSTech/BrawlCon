@@ -144,6 +144,20 @@ if(command === "map") {
   }
 
     
+	if(command === "join") {
+	if (message.member.voice.channel) {
+	  const connection = await message.member.voice.channel.join();
+	}
+});
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	if(command === "st-dm") {
 const user = message.mentions.users.first();
 const dmContent = args.join(" ").slice(23);
