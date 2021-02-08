@@ -219,7 +219,7 @@ const embed = new Discord.MessageEmbed()
   
  
 if(command === "status") {
-if (message.author.id === '672930250577018899'){
+if(message.author.id === '672930250577018899'){
 const icon = args[0];
 const text = args.slice(3).join(" ");
 const mode = args[1];
