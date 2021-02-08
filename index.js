@@ -18,7 +18,7 @@ client.on("ready", () => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
  // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
- client.user.setActivity('Con Co. | -bc help', { type: 'PLAYING' });
+ //client.user.setActivity('Con Co. | -bc help', { type: 'PLAYING' });
  //client.user.setPresence({ activity: { name: 'Con Co. | Maintenance in Progress!' }, status: 'idle' });
  //client.user.setPresence({ activity: { name: 'Restarting Systems' }, status: 'dnd' });
 // const request = require('request');
@@ -219,11 +219,19 @@ const embed = new Discord.MessageEmbed()
   
  
 if(command === "status") {
-if (message.author.id === '672930250577018899') {
-const newStatus = args.join(" ");
-client.user.setActivity(newStatus);
-message.channel.send("Status is set to " +  newStatus + ".");
-}
+const icon = args[0];
+const text = args[1];
+const mode = args[2];
+const www = args[3];
+client.user.setPresence({
+    status: icon,
+    activity: {
+        name: text,
+        type: mode,
+        url: www
+    }
+})
+message.channel.send("Your status was set as " + icon + " for the icon, " + text + " for the status text, " + mode + " for the mode, " + " and " + www + " for stream url.");
 }
 	
 	
