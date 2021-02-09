@@ -114,6 +114,13 @@ message.channel.send("Restarting Bot...");
 message.channel.send("https://dsc.lol/con-co");
 }
    
+if(command === "dab") {
+message.channel.send("dab");
+}
+	
+	
+	
+	
 	
 if(command === "map") {
 
