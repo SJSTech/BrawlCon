@@ -122,9 +122,9 @@ message.channel.send("dab");
 message.reply("Support staff will be with you shortly. Thanks!");
 const embed = new Discord.MessageEmbed()
 const reason = args.join(" ");
-  .setTitle("Ticket Request")
-  .setColor(ff0909)
-  .setdiscription("Someone just requested a ticket in the support center! Question or concern - " + reason + ".");
+  .setTitle("Ticket Request");
+  .setColor(ff0909);
+  .setDescription("Someone just requested a ticket in the support center! Question or concern - " + reason + ".");
 const channel = client.channels.cache.get('809222284488605727');
 channel.send
 	}
