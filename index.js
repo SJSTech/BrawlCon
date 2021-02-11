@@ -123,7 +123,7 @@ const reason = args.join(" ");
 message.reply("Staff will be with you shortly please describe your question or concern in another message. Thanks!");
 const channel = client.channels.cache.get('809222284488605727');
 const username = message.author.id;
-channel.send("<@" " + username + " ">" " just requested a ticket in the support center! The reason will follow if provided." " + reason + " ".");
+channel.send("<" " + username + " ">" " just requested a ticket in the support center! The reason will follow if provided." " + reason + " ".");
 	}
 	
 	
