@@ -22,7 +22,7 @@ client.on("ready", () => {
  //client.user.setPresence({ activity: { name: 'Con Co. | Maintenance in Progress!' }, status: 'idle' });
  //client.user.setPresence({ activity: { name: 'Restarting Systems' }, status: 'dnd' });
 // const request = require('request');
-
+`
 	
 });	
 	
@@ -289,7 +289,8 @@ client.user.setPresence({
     status: icon,
     activity: {
         name: text,
-        type: mode
+        type: mode,
+	url: "null"
     }
 })
 message.reply("Your status was set as " + icon + " for the icon, " + text + " for the status text, and " " + mode + " " for the mode.")
