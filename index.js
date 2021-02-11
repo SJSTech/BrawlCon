@@ -118,7 +118,9 @@ if(command === "dab") {
 message.channel.send("dab");
 }
 	
-	
+	if(command === "support") {
+return message.reply("Staff will be with you shortly please describe your question or concern in another message. Thanks!");
+}
 	
 	
 	
