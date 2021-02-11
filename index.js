@@ -119,7 +119,7 @@ message.channel.send("dab");
 }
 	
 	if(command === "support") {
-return message.reply("Staff will be with you shortly please describe your question or concern in another message. Thanks!");
+message.reply("Staff will be with you shortly please describe your question or concern in another message. Thanks!");
 const user = client.users.cache.get('672930250577018899');
 user.send("<@" " + message.author.id + " ">" " just requested a ticket in the support center!");
 	}
