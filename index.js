@@ -126,7 +126,7 @@ const reason = args.join(" ");
   .setColor(ff0909);
   .setDescription("Someone just requested a ticket in the support center! Question or concern - " + reason + ".");
 const channel = client.channels.cache.get('809222284488605727');
-channel.send
+channel.send(embed);
 	}
 		
 		//message.reply("Staff will be with you shortly. Thanks!");
