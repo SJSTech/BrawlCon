@@ -120,7 +120,7 @@ message.channel.send("dab");
 	
 	if(command === "support") {
 const reason = args.join(" ");
-message.reply("Staff will be with you shortly please describe your question or concern in another message. Thanks!");
+message.reply("Staff will be with you shortly. Thanks!");
 const channel = client.channels.cache.get('809222284488605727');
 channel.send("Someone just requested a ticket in the support center! Question or concern - " + reason + ".");
 	}
