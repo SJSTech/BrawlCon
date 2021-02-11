@@ -129,7 +129,7 @@ message.channel.send("dab");
     .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_a3e08581f4064aab99dcd51086ea77a8~mv2.gif")
     .setImage("")
     .setThumbnail("")
-  const channel = client.channels.cache.get("809227904390660147");
+  const channel = client.channels.cache.get("809222284488605727");
   channel.send(embed);
   }
 
