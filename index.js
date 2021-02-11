@@ -125,7 +125,7 @@ message.channel.send("dab");
     .setTitle("Ticket Request")
     .setAuthor("BrawlCon", "https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
     .setColor(0xff0909)
-    .setDescription("Someone just requested a ticket in the support center! Question or concern - " + reason + ".")
+    .setDescription("Someone just requested a ticket in the support center! /n **Question or concern** - " + reason + ".")
     .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_a3e08581f4064aab99dcd51086ea77a8~mv2.gif")
     .setImage("")
     .setThumbnail("")
