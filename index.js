@@ -119,13 +119,19 @@ message.channel.send("dab");
 }
 	
 	if(command === "support") {
+message.reply("Support staff will be with you shortly. Thanks!");
 const embed = new Discord.MessageEmbed()
+const reason = args.join(" ");
   .setTitle("Ticket Request")
   .setColor(ff0909)
-  const reason = args.join(" ");
-message.reply("Staff will be with you shortly. Thanks!");
+  .setdiscription("Someone just requested a ticket in the support center! Question or concern - " + reason + ".");
 const channel = client.channels.cache.get('809222284488605727');
-channel.send("Someone just requested a ticket in the support center! Question or concern - " + reason + ".");
+channel.send
+	}
+		
+		//message.reply("Staff will be with you shortly. Thanks!");
+//const channel = client.channels.cache.get('809222284488605727');
+//channel.send
 }	
 		
 		
