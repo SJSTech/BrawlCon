@@ -134,19 +134,6 @@ message.channel.send("dab");
   }
 
 		
-		//message.reply("Staff will be with you shortly. Thanks!");
-//const channel = client.channels.cache.get('809222284488605727');
-//channel.send
-}	
-		
-		
-		
-		
- //const reason = args.join(" ");
-//message.reply("Staff will be with you shortly. Thanks!");
-//const channel = client.channels.cache.get('809222284488605727');
-//channel.send("Someone just requested a ticket in the support center! Question or concern - " + reason + ".");
-	}
 	
 	
 	
