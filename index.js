@@ -119,15 +119,20 @@ message.channel.send("dab");
 }
 	
 	if(command === "support") {
-message.reply("Support staff will be with you shortly. Thanks!");
-const embed = new Discord.MessageEmbed()
-const reason = args.join(" ");
-  .setTitle("Ticket Request");
-  .setColor(ff0909);
-  .setDescription("Someone just requested a ticket in the support center! Question or concern - " + reason + ".");
-const channel = client.channels.cache.get('809222284488605727');
-message.channel.send(embed);
-	}
+    const reason =  args.join(" ");
+    message.reply("Staff will be with you shortly. Thanks!");
+    const embed = new Discord.MessageEmbed()
+    .setTitle("Ticket Request")
+    .setAuthor("BrawlCon", "https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
+    .setColor(0xff0909)
+    .setDescription("Someone just requested a ticket in the support center! Question or concern - " + reason + ".")
+    .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_a3e08581f4064aab99dcd51086ea77a8~mv2.gif")
+    .setImage("")
+    .setThumbnail("")
+  const channel = client.channels.cache.get("809227904390660147");
+  channel.send(embed);
+  }
+
 		
 		//message.reply("Staff will be with you shortly. Thanks!");
 //const channel = client.channels.cache.get('809222284488605727');
