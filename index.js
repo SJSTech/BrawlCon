@@ -121,11 +121,12 @@ message.channel.send("dab");
 	if(command === "support") {
 const reason = args.join(" ");
 message.reply("Staff will be with you shortly. Thanks!");
+  .then(msg => {
+    msg.delete({ timeout: 10000 })
 const channel = client.channels.cache.get('809222284488605727');
 channel.send("Someone just requested a ticket in the support center! Question or concern - " + reason + ".");
 	}
-	
-	
+	}
 	
 if(command === "map") {
 
