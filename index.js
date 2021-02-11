@@ -280,19 +280,20 @@ if(command === "kick") {
   
  
 if(command === "status") {
-if (message.author.id === '672930250577018899'){
+	if (message.author.id === '672930250577018899'){
 const icon = args[0];
-const text = args.slice(2).join(" ");
+const text = args.slice(3).join(" ");
 const mode = args[1];
+const www = args[2];
 client.user.setPresence({
-    status:   icon,
+    status: icon,
     activity: {
-        name:   text,
-        type:  mode,
-        url:   "null"
+        name: text,
+        type: mode,
+        url: www
     }
 })
-message.reply("Status Set!")
+message.reply("Your status was set as " + icon + " for the icon, " + text + " for the status text, " + mode + " for the mode, " + " and " + www + " for stream url.")
 }
 }
 
