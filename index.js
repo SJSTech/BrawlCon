@@ -119,8 +119,6 @@ message.channel.send("dab");
 	
         
  
-client.on('message', msg => {
-    if (message.channel.id === '796824844851347466') {
 	if(command === "support") {
     const reason =  args.join(" ");
     message.reply("Staff will be with you shortly. Thanks!");
