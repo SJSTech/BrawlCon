@@ -140,7 +140,7 @@ message.channel.send("dab");
 
 	if(command === "suggest") {
 const reason =  args.join(" ");
-    message.reply("Suggestion added to #suggestion-feed. Thanks! ");
+    //message.reply("Suggestion added to #suggestion-feed. Thanks! ");
     const embed = new Discord.MessageEmbed()
     .setTitle("Suggestion")
     .setAuthor("BrawlCon", "https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
