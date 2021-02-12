@@ -161,7 +161,7 @@ message.channel.send('My message to react to.').then(sentMessage => {
 	sentMessage.react('👍');
 	sentMessage.react('👎');
 
-}			  
+});		  
 			  
   
 
