@@ -140,12 +140,12 @@ message.channel.send("dab");
 
 	if(command === "suggest") {
 const reason =  args.join(" ");
-    message.reply("Suggestion added to #suggestion-feed. Thanks! ");
+    message.reply("Suggestion added to {#809609973948481556}. Thanks! ");
     const embed = new Discord.MessageEmbed()
     .setTitle("Suggestion")
     .setAuthor("BrawlCon", "https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
     .setColor(0xeed003)
-    .setDescription("Someone has suggested something for our server! \n **Question or Concern** > " + reason + "." )
+    .setDescription("Someone has suggested something for our server! \n **Suggestion** > " + reason + "." )
     .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_a3e08581f4064aab99dcd51086ea77a8~mv2.gif")
     .setImage("")
     .setThumbnail("")
