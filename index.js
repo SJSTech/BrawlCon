@@ -138,7 +138,7 @@ message.channel.send("dab");
 	
 
 
-if(command === "suggest") {
+	if(command === "suggest") {
 const reason =  args.join(" ");
     message.reply("Suggestion added to #suggestion-feed. Thanks! ");
     const embed = new Discord.MessageEmbed()
@@ -149,8 +149,8 @@ const reason =  args.join(" ");
     .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_a3e08581f4064aab99dcd51086ea77a8~mv2.gif")
     .setImage("")
     .setThumbnail("")
-  const channel = client.channels.cache.get("809609973948481556");
-  channel.send(embed).then(sentMessage => {
+ const channel = client.channels.cache.get('809609973948481556');
+ channel.send('Someone has suggested something for the server \n **Suggestion** - " + reason + "." ');
   message.react('👍').then(() => message.react('👎'));
   }
 
