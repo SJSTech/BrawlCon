@@ -152,7 +152,7 @@ const reason =  args.join(" ");
   const channel = client.channels.cache.get("809609973948481556");
   channel.send(embed);
   }
-}
+
 		
 	
 	
