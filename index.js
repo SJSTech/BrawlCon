@@ -132,7 +132,8 @@ message.channel.send("dab");
     .setThumbnail("")
   const channel = client.channels.cache.get("809222284488605727");
   channel.send(embed);
-  }
+  message.react('✅')
+}
 	
 	
 	
