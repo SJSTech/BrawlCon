@@ -156,7 +156,12 @@ message.react('👍').then(() => message.react('👎'));
 			  
 			  
 			  
-			  
+if(command === 'react') {			  
+message.channel.send('My message to react to.').then(sentMessage => {
+	sentMessage.react('👍');
+	sentMessage.react('👎');
+
+}			  
 			  
   
 
