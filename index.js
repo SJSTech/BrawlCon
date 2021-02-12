@@ -150,15 +150,14 @@ const reason =  args.join(" ");
     .setImage("")
     .setThumbnail("")
  const channel = client.channels.cache.get('809609973948481556');
- channel.send(embed).then(sentMessage => {
-sentMessage.react('👍');
-sentMessage.react('👎');
- }
+ channel.send(embed)
+message.react('👍').then(() => message.react('👎'));
+	}
 			  
 			  
 			  
 			  
-			  //message.react('👍').then(() => message.react('👎'));
+			  
   
 
 		
