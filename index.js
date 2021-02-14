@@ -9,7 +9,6 @@ const client = new Discord.Client();
 
 // Here we load the config.json file that contains our token and our prefix values. 
 const config = require("./package.json");
-const welcome = require("./welcome.js");
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
@@ -23,7 +22,7 @@ client.on("ready", () => {
  //client.user.setPresence({ activity: { name: 'Con Co. | Maintenance in Progress!' }, status: 'idle' });
  //client.user.setPresence({ activity: { name: 'Restarting Systems' }, status: 'dnd' });
 // const request = require('request');
-welcome(client)
+
 });	
 	
 	
@@ -120,21 +119,7 @@ message.channel.send("dab");
 	
         
  
-	if(command === "support") {
-    const reason =  args.join(" ");
-    message.reply("Staff will be with you shortly. Thanks!");
-    const embed = new Discord.MessageEmbed()
-    .setTitle("Ticket Request")
-    .setAuthor("BrawlCon", "https://static.wixstatic.com/media/4c553e_7fc05571deea44dc853c4a51b7b4545e~mv2.png")
-    .setColor(0xff0909)
-    .setDescription("Someone just requested a ticket in the support center! \n **Question or Concern** : " + reason + "." )
-    .setFooter("Copyright Con Co. and BrawlCon", "https://static.wixstatic.com/media/4c553e_a3e08581f4064aab99dcd51086ea77a8~mv2.gif")
-    .setImage("")
-    .setThumbnail("")
-  const channel = client.channels.cache.get("809222284488605727");
-  channel.send(embed);
-  message.react('✅')
-}
+	
 	
 	
 	
