@@ -194,7 +194,10 @@ if(command === "map") {
     // message.delete().catch(O_o=>{});  
     mapMessageReturn = 'https://cdn.brawlify.com/map/' + mapMessageReturn + '.png';
     message.channel.send(mapMessageReturn);
-  }
+  
+else message.reply("This is not a valid map!");
+
+}
 
     
 	if(command === "join") {
