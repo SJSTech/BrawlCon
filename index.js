@@ -9,6 +9,7 @@ const client = new Discord.Client();
 
 // Here we load the config.json file that contains our token and our prefix values. 
 const config = require("./package.json");
+const welcome = require("./welcome.js");
 // config.token contains the bot's token
 // config.prefix contains the message prefix.
 
@@ -22,7 +23,7 @@ client.on("ready", () => {
  //client.user.setPresence({ activity: { name: 'Con Co. | Maintenance in Progress!' }, status: 'idle' });
  //client.user.setPresence({ activity: { name: 'Restarting Systems' }, status: 'dnd' });
 // const request = require('request');
-	
+welcome(client)
 });	
 	
 	
