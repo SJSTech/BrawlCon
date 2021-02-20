@@ -118,7 +118,11 @@ message.channel.send("dab");
 }
 	
         
- 
+ if(command === "status") {
+ const text = args.join(" ");
+ client.user.setActivity(text);
+ message.reply("Status set");
+ }
 	
 	
 	
