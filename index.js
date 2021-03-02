@@ -22,7 +22,7 @@ client.on("ready", () => {
  //client.user.setPresence({ activity: { name: 'Con Co. | Maintenance in Progress!' }, status: 'idle' });
  //client.user.setPresence({ activity: { name: 'Restarting Systems' }, status: 'dnd' });
 // const request = require('request');
-client.user.setPresence({ activity: { name: 'Offline' }, status: 'invisible' });
+client.user.setStatus('invisible');
 });	
 	
 	
