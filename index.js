@@ -18,7 +18,7 @@ client.on("ready", () => {
   // Example of changing the bot's playing game to something useful. `client.user` is what the
   // docs refer to as the "ClientUser".
  // client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
- //client.user.setPresence({ activity: { name: 'BrawlCon.com | -bc help' }, status: 'idle' });
+ client.user.setPresence({ activity: { name: 'BrawlCon.com | -bc help' }, status: 'dnd' });
  //client.user.setPresence({ activity: { name: 'Con Co. | Maintenance in Progress!' }, status: 'idle' });
  //client.user.setPresence({ activity: { name: 'Restarting Systems' }, status: 'dnd' });
 // const request = require('request');
